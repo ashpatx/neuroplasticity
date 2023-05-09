@@ -1,1 +1,46 @@
+#day 31 challenge
+def pickColor(color):
+  if color == "red":
+    return ('\033[31m')
+  elif color == "blue":
+    return ('\033[34m')
+  elif color == "green":
+    return ('\033[32m')
+  elif color == "yellow":
+    return ('\033[33m')
+  elif color == "magenta":
+    return ('\033[35m')
+
+
+diary = f"{pickColor('red')}={pickColor('blue')}={pickColor('green')}={pickColor('yellow')}={pickColor('magenta')}= Music App {pickColor('magenta')}={pickColor('yellow')}={pickColor('green')}={pickColor('blue')}={pickColor('red')}="
+
+print(f"            {diary:^35}")
+print(f"🔥▶️\t{pickColor('magenta')}Radio Gaga")
+print(f"\t{pickColor('yellow')}Queen")
+
+prev = "prev"
+next = "next"
+pause = "pause"
+
+print(f"{pickColor('red')}{prev:<35}")
+print(f"{pickColor('blue')}{next:^35}")
+print(f"{pickColor('green')}{pause:>35}")
+
+print()
+print()
+print()
+
+text="WELCOME TO"
+print(f"{pickColor('blue')}{text:^35}")
+text="--  ARMBOOK  --"
+print(f"{pickColor('blue')}{text:^35}")
+text="Definitely not a rip off of a certain other social networking site."
+print(f"{pickColor('yellow')}{text:>35}")
+text="Honest."
+print(f"{pickColor('red')}{text:^35}")
+text="Username:"
+print(f"{pickColor('green')}{text:^35}")
+
+text:"Password:"
+print(f"{pickColor('green')}{text:^35}")
 
