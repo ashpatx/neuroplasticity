@@ -5,4 +5,36 @@ language = ["Hello", "Nameste", "Hola", "Kem Cho", "Bonjour", "Habari", "Mahabar
 pick= random.randint(0,9)
 print(f"What language is this greeting: {language[pick]}")
 
-#day 33, dynamic list
+#day 33, dynamic to list 
+import os
+import time
+
+toDoList = ["figma design", "code crud app", "post on social media"]
+
+def printList():
+  print()
+  for item in toDoList:
+    print(item)
+  print()
+
+while True:
+  menu = input("To Do List Manager:\n\nDo you want to view, add or edit the todo list?\n")
+  if menu == "view":
+    printList()
+  elif menu == "add":
+    item = input("What do you want to add?\n")
+    toDoList.append(item)
+    print(f"Here's your updated to do list: {', '.join(toDoList)}")
+  elif menu == "edit":
+    item = input("What do you want to remove?\n")
+    if item in toDoList:
+      toDoList.remove(item)
+      print("Item removed.")
+    else:
+      print("Item not found.")
+  else:
+    print("Invalid input. Please try again.")
+
+  time.sleep(60)
+  os.system('clear')
+
