@@ -1,1 +1,32 @@
+#CLI tool using open ai api + rich library for formatting
 
+import os
+import openai
+from rich.console import Console
+from rich.style import Style
+from rich.prompt import Prompt
+
+console = Console()
+openai.api_key = os.getenv("OPEN_API_KEY")
+
+while True:
+  question = Prompt.ask("[bold blue]What is your question?[/bold blue]")
+  if question.lower() == "exit":
+    console.print("\n[bold red]See ya![/bold red]\n",
+                  style=Style(color='purple'))
+    break
+
+completion = openai.ChatCompletion.create(
+  model="gpt-3.5-turbo",
+  message=[{
+    "role": "system",
+    "content": "You are an assistant. Answer to given question."
+  }, {
+    "role": "user",
+    "content": question
+  }])
+
+#console.print("[bold purple]Your question:[/bold purple] " + question, style=Style(color='purple'))
+
+console.print("[bold purple]Answer: [/bold purple]" +
+              completion.choices[0].message.content + "\n")
