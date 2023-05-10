@@ -1,1 +1,9 @@
+#day 32, create a list
 
+import random
+
+language = ["Hello", "Nameste", "Hola", "Kem Cho", "Bonjour", "Habari", "Mahabar","Konnichiwa", "Guten Tag!"]
+
+pick= random.randint(0,9)
+
+print(f"What language is this greeting: {language[pick]}")
