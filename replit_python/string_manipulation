@@ -30,3 +30,25 @@ complete = f"{fName[:3].title()}{lName[:3].title()}{maiden[:2].title()}{city[:-3
 
 print(f"Your Star Wars name is {complete}")
 
+#Day 38 Challenge 
+
+def colors(rainbow):
+  if rainbow == "r":
+    print('\033[31m', end='')  #red
+  elif rainbow  == "b":
+    print('\033[34m', end='')  #blue
+  elif rainbow == "g":
+    print('\033[32m', end='')  #green
+  elif rainbow  == "p":
+    print('\033[35m', end='')  #purple
+  elif rainbow == "y":
+    print('\033[33m', end='')  #yellow
+  else:
+    print('\033[0m', end='')  #back to default
+
+sample = input("give me a sentence!")
+
+for letter in sample:
+  colors(letter.lower())
+  print(letter, end="")
+  print()
