@@ -1,0 +1,19 @@
+#Day 36 Challenge 
+contacts = []
+
+def printList():
+  print()
+  for name in contacts: 
+    print(name)
+    print()
+
+while True: 
+  fName = input("First Name: ").strip().capitalize()
+  lName = input("Last Name: ").strip().capitalize()
+  name = f"{fName}{lName}"
+  if name not in contacts: 
+    contacts.append(name)
+  else: 
+    print("error: duplicate name!")
+    printList()
+  
