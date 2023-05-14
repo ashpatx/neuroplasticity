@@ -17,3 +17,16 @@ while True:
     print("error: duplicate name!")
     printList()
   
+  #Day 37 Challenge
+  print("Welcome to the Star Wars Name Generator")
+print()
+questions = input("Enter your first, last + maiden names.\nAlso, enter the city you were born in\n").split()
+fName = questions[0].strip()
+lName = questions[1].strip()
+maiden = questions[2].strip()
+city = questions[3].strip()
+
+complete = f"{fName[:3].title()}{lName[:3].title()}{maiden[:2].title()}{city[:-3].lower()}"
+
+print(f"Your Star Wars name is {complete}")
+
