@@ -1,0 +1,47 @@
+#Day 38 Challenge
+
+import random, os, time
+
+print("⭐️ Hangman ⭐️")
+print()
+
+listOfWords = [
+  "british", "suave", "integrity", "accent", "evil", "genius", "Downton"
+]
+letterSelect = []
+lives = 4
+
+word = random.choice(listOfWords)
+
+while True:
+  time.sleep(1)
+  os.system('clear')
+  letter = input("Choose a letter: ")
+
+  if letter in letterSelect:
+    print("You have tried that before!")
+    continue
+
+  letterSelect.append(letter)
+
+  if letter in word:
+    print("Correct! You found a letter")
+  else:
+    print("Nope, not in there!")
+    lives -= 1
+
+  allLetters = True
+  print()
+  for i in word:
+    if i in letterSelect:
+      print(i, end="")
+    else:
+      print("_", end="")
+      allLetters = False
+  print()
+
+  if allLetters:
+    print(f"You ran out of lives! The answer was {word}")
+    break
+  else:
+    print(f"You only have {lives} left!")
