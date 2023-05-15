@@ -1,0 +1,13 @@
+#Day 40 Challenge
+print("🤠 Contact Card")
+print()
+
+name = input("Your name: ").strip().title()
+DOB = input("Your DOB: ").strip()
+teleNumber = input("Your telephone number: ").strip()
+emailAddress = input("Your email: ")
+address = input("Address: ")
+
+userContact = {'name': name, 'dob': DOB, 'tel': teleNumber, 'email': emailAddress, 'address':address}
+print()
+print(f"Hi {userContact['name']}. Our dictionary says that you were born on {userContact['dob']}, we can all you on {userContact['tel']}, email {userContact['email']}, or write to {userContact['email']}.")
