@@ -11,3 +11,13 @@ address = input("Address: ")
 userContact = {'name': name, 'dob': DOB, 'tel': teleNumber, 'email': emailAddress, 'address':address}
 print()
 print(f"Hi {userContact['name']}. Our dictionary says that you were born on {userContact['dob']}, we can all you on {userContact['tel']}, email {userContact['email']}, or write to {userContact['email']}.")
+
+#Day 41 Challenge: Dictionaries with Loops
+webInfo = {"name" : None, "url": None, "description": None, "rating": None}
+
+for name in webInfo.keys():
+  webInfo[name] = input(f"{name}: ")
+  
+print()
+for name, value in webInfo.items():
+  print(f"{name}: {value}")
