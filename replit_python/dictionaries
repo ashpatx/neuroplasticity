@@ -21,3 +21,36 @@ for name in webInfo.keys():
 print()
 for name, value in webInfo.items():
   print(f"{name}: {value}")
+  
+#Day 42 Challenge
+print("Create your avatar 🕹")
+earthColor = "\033[32m"
+fireColor = "\033[31m"
+airColor = "\033[37m"
+waterColor = "\033[34m"
+
+avatars = {
+  "beast name": None,
+  "type": None,
+  "special move": None,
+  "HP": None,
+  "MP": None
+}
+
+print()
+
+for name, value in avatars.items():
+  avatars[name] = input(f"{name}:\n ")
+
+if avatars["type"] == "earth":
+  print(earthColor, end="")
+if avatars["type"] == "fire":
+  print(fireColor, end="")
+if avatars["type"] == "water":
+  print(waterColor, end="")
+if avatars["type"] == "air":
+  print(airColor, end="")
+
+for name, value in avatars.items():
+  print(f"{name}: {value}")
+
