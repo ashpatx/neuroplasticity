@@ -29,3 +29,59 @@ bingo = [[numbers[0], numbers[1], numbers[2]],
          [numbers[5], numbers[6], numbers[7]]]
 
 prettyPrint()
+
+
+#Day 44 Challenge: Dynamic Lists
+import random, os, time 
+
+print("Bingo Night!")
+print()
+
+bingo = []
+
+def rando():
+  number = random.randint(1,90)
+  return number
+
+def prettyPrint():
+          for row in bingo: 
+            for item in row: 
+              print(item, end="\t|\t")
+          print()
+#createCard subroutine 
+def createCard():
+  global bingo
+  numbers = []
+  for i in range(8):
+    numbers=rando()
+    while num in numbers: 
+      num = rando()
+    numbers.append(rando())
+
+numbers.sort()
+
+bingo = [[numbers[0],[numbers[1], numbers[2]],
+         [numbers[3],"BINGO!!",numbers[4]],
+         [numbers[5],numbers[6],numbers[7]]
+
+createCard()
+while True:
+  prettyPrint()
+  rando = int(input("Next Guess Number: "))
+    for row in range(3):
+      for intem in range(3):
+        if bingo[row][item] == num:
+          bingo[row][item] ="X"
+
+xShape = 0
+
+for row in bingo: 
+  for item in row:
+    if item =="X:
+    xShape +=1
+
+if xShape==8:
+  print("You've won Bingo!")
+
+time.sleep(10)
+os.system("clear")
