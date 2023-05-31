@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4effa;
+  color: #000;
+}
+
+/*navigation section*/
+nav {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #f4effa;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  position: fixed;
+}
+
+.navlink {
+  padding: 20px;
+  color: #000;
+}
+
+.navlink,
+.sign-in-btn {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sign-in-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  border-radius: 8px;
+  font-size: 18px;
+  border: 1px solid black;
+  padding: 10px 10px;
+}
+
+/*header*/
+header {
+  background-image: url("https://images.unsplash.com/photo-1460411794035-42aac080490a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80");
+  margin-top: 1%;
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
+  position: relative;
+  color: #000;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: start;
+  text-align: left;
+  padding-left: 10%;
+}
+
+.hero {
+  font-weight: 500;
+}
+
+form.search input[type="text"] {
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid grey;
+  width: 70%;
+}
+
+form.search button {
+  background-color: #000;
+  color: white;
+  border-radius: 8px;
+  font-size: 18px;
+  border: 1px solid black;
+  padding: 10px 10px;
+}
+
+/*hosting section*/
+.hosting {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  flex-wrap: wrap;
+}
+
+.hosting-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  aspect-ratio: 1 / 1;
+}
+
+.hosting-container:hover {
+  transform: scale(0.8);
+}
+
+/*typography*/
+a {
+  text-decoration: none;
+}
