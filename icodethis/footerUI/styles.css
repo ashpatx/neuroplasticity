@@ -1,0 +1,126 @@
+:root {
+  --color-light-pink: #f9f0ff;
+  --color-light-black: #181818;
+  --color-light-gray: #696969;
+  --color-dark-blue: #4776f0;
+  --color-light-blue: #87c2fc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-light-pink);
+  color: var(--color-light-black);
+  font-size: 1rem;
+  line-height: 1.4;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.circle-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #f7a1f3, #ffdb6f);
+}
+
+.content-container {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-light-pink);
+  width: 700px;
+  height: 60%;
+  gap: 30px;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 4px rgb(120, 121, 218, 0.4);
+}
+
+.content-row01 {
+  cursor: pointer;
+  display: flex;
+  flex-direction: col;
+  gap: 25px;
+}
+
+.content-col h3,
+p {
+  padding: 0.2rem;
+}
+
+.content-newsletter form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.2rem;
+  width: 100%;
+  border-radius: 5px;
+  gap: 1rem;
+}
+
+.content-newsletter form input {
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  border: 2px solid #87c2fc;
+}
+
+.content-newsletter form input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.content-newsletter form input:focus {
+  outline: none;
+  border: 2px solid #87c2fc;
+}
+.subscribe-btn {
+  border: none;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 5px 4px rgba(214, 214, 214, 0.8);
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+  background: linear-gradient(
+    to right,
+    var(--color-light-blue),
+    var(--color-dark-blue)
+  );
+}
+
+/*divider*/
+hr {
+  display: block;
+  color: var(--color-light-gray);
+  justify-content: center;
+  width: 650px;
+  margin-top: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
+/*Privacy Policy Section */
+.privacy-policy {
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 0.8em;
+  color: var(--color-light-gray);
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-end;
+}
