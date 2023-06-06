@@ -1,1 +1,154 @@
+:root {
+  --bg-neutral: #f5f2ff;
 
+  --color-white: white;
+  --color-dark-purple: #b496ff;
+
+  --text-black: #000;
+  --text-light-gray: #707070;
+  --text-dark-gray: #3d3d3d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-neutral);
+  color: black;
+  display: grid;
+  place-items: center;
+  line-height: 1.4;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: white;
+  width: 25%;
+  height: auto;
+  padding: 2rem;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.header i {
+  font-size: 1.2rem;
+}
+
+/* SEARCH */
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  position: relative;
+  display: block;
+  padding: 1rem 0 1rem 2rem;
+  background-color: var(--bg-neutral);
+  border: none;
+  outline: none;
+}
+
+.search-box input::placeholder {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-dark-gray: #3d3d3d);
+  font-size: 1rem;
+}
+
+.search-box i {
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-dark-gray: #3d3d3d);
+}
+
+/* RECENT CONVERSATIONS */
+.recent {
+  text-transform: uppercase;
+  margin: 1rem 0.5rem 0.5rem;
+}
+
+/* PROFILES */
+.profile-section {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.2fr;
+  padding: 0.75rem;
+  gap: 1rem 0.5rem;
+}
+
+.profile-desc {
+  align-self: center;
+}
+
+.profile-section input {
+  width: 20px;
+  height: 20px;
+  align-self: center;
+}
+
+/* PROFILE PICTURES */
+.david-img {
+  background-image: url("https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80");
+  background-size: cover;
+  background-position: top;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+}
+
+.christy-img {
+  background-image: url("https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80");
+  background-size: cover;
+  background-position: top;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+}
+
+.james-img {
+  background-image: url("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80");
+  background-position: top;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+}
+
+.danica-img {
+  background-image: url("https://images.unsplash.com/photo-1546961329-78bef0414d7c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60");
+  background-size: cover;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 700px) {
+  .container {
+    padding: 3rem 1rem;
+  }
+  .header {
+    width: 100%;
+  }
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
