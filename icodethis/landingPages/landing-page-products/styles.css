@@ -1,1 +1,179 @@
+:root {
+  --bg-dark-pink: #ff6b92;
+  --bg-light-coral: #ff7f50;
+  --bg-neutral: #fff5f8;
+  --text-black: #000;
+  --text-light-gray: #707070;
+  --text-dark-gray: #3d3d3d;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    to top left,
+    var(--bg-light-coral),
+    var(--bg-dark-pink)
+  );
+  display: grid;
+  place-items: center;
+  line-height: 1.4;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--bg-neutral);
+  width: 80%;
+  margin: 3rem 0;
+}
+
+/* NAVIGATION BAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--bg-neutral);
+  align-items: center;
+}
+
+.menu-links,
+.menu-inputs {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style-type: none;
+}
+
+.menu-links a,
+.menu-inputs a {
+  text-decoration: none;
+  color: var(--text-dark-gray);
+}
+
+.menu-products i {
+  padding: 0.5rem;
+  color: var(--text-dark-gray);
+}
+
+.menu-inputs i {
+  color: var(--text-dark-gray);
+}
+
+.sign-up-btn,
+.shop-now-btn {
+  cursor: pointer;
+  padding: 0.7rem;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to top left,
+    var(--bg-light-coral),
+    var(--bg-dark-pink)
+  );
+  border: none;
+  color: var(--bg-neutral);
+  font-family: "Poppins", sans-serif;
+  align-self: center;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZmFsbCUyMGNsb3RoZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60");
+  background-position: center;
+  background-size: cover;
+  height: 450px;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: var(--bg-neutral);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  text-align: center;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.hero .shop-now-btn {
+  width: 25%;
+}
+
+/* MAIN: ARTICLES */
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2rem;
+  padding: 4rem;
+}
+
+.article-detail {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 3rem;
+  color: var(--text-dark-gray: #3d3d3d);
+  text-align: center;
+}
+
+.article-img-01 {
+  background-image: url("https://images.unsplash.com/photo-1602706294170-1fed8eecd9f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a25pdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60");
+  width: auto;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 1rem;
+}
+
+.article-img-02 {
+  background-image: url("https://images.unsplash.com/photo-1592736158789-303583e8db16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80");
+  width: auto;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 1rem;
+}
+
+.purchase-btn {
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  cursor: pointer;
+  background-color: var(--bg-neutral);
+  border: 1px solid var(--text-black);
+  color: var(--text-black);
+  font-family: "Poppins", sans-serif;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 700px) {
+  .container {
+    padding: 3rem 1rem;
+  }
+  header {
+    width: 100%;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
