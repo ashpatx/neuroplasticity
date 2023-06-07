@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Message</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+</body>
+<div class="container">
+  <!-- VERTICAL BAR -->
+  <div class="vertical-line">
+  </div>
+  <!-- REPOSITORIES -->
+  <main class="repo-content">
+    <div class="repo-header">
+      <h3>Repositories</h3>
+      <i class="fa-solid fa-plus"></i>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-bar">
+      <input type="search" placeholder="Find a repository" />
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+
+    <!-- GRID -->
+    <div class="repo-grid">
+      <div class="row">
+        <i class="fa-solid fa-lock"></i>
+        <p>lldiko/react-tutorial-pics</p>
+      </div>
+      <div class="row">
+        <i class="fa-solid fa-lock"></i>
+        <p>lldiko/react-tutorial-season</p>
+      </div>
+      <div class="row">
+        <i class="fa-solid fa-lock"></i>
+        <p>lldiko/react-tutorial-components</p>
+      </div>
+      <div class="row">
+        <i class="fa-solid fa-lock"></i>
+        <p>lldiko/react-tutorial-jsx</p>
+      </div>
+      <div class="show-more">
+        <a href="#">Show more</a>
+      </div>
+    </div>
+    <!-- BUTTON -->
+    <button class="create-btn">Create an organization</button>
+
+  </main>
+
+</div>
+
+</html>
