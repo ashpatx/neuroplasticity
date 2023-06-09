@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Picker</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <main>
+    <!-- Column 1 -->
+    <section class="col01">
+      <h3>Absolute Time Range</h3>
+      <label>
+        From
+        <input type="text" name="from" placeholder="now-1h" />
+      </label>
+      <label>
+        To
+        <input type="text" placeholder="now" />
+      </label>
+      <button class="apply-btn">Apply</button>
+      <div class="read-more">
+        <p>Want to find out more? <a href="#">Read the documentation</a></p>
+      </div>
+      <div class="horizontal-divider"></div>
+      <footer><button class="UTC-btn">UTC</button>
+        <a href="#">Change the time zone</a>
+      </footer>
+    </section>
+
+    <!-- Column 2 -->
+    <section class="col02">
+      <div class="exit"><button class="exit-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button></div>
+      <h4>Relative Time Ranges</h4>
+      <ul>
+        <li>Last 5 minutes</li>
+        <li>Last 15 minutes</li>
+        <li>Last 30 minutes</li>
+        <li>Last 1 hour</li>
+        <li>Last 3 hours</li>
+        <li>Last 6 hours</li>
+        <li>Last 12 hours</li>
+        <button class="load-btn">Load more</button>
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>
