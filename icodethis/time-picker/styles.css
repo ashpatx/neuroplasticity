@@ -1,0 +1,179 @@
+:root {
+  --bg-dark: #0e0934;
+  --highlighter: #5f4ee0;
+  --color-light: #faf9fe;
+  --text-links: #988deb;
+  --color-dark: #19105b;
+  --color-gray: #21213b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--color-light);
+  display: grid;
+  place-items: center;
+  line-height: 1.4;
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  margin: 2em 0;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "col01" "col02";
+  border-radius: 10px;
+  background-color: var(--color-dark);
+}
+
+/* Section 1: Absolute Time Range */
+.col01 {
+  display: flex;
+  flex-direction: column;
+  grid-area: "col01";
+  gap: 1em;
+  padding: 2rem;
+}
+
+.col01 h3 {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.col01 label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.col01 input {
+  cursor: pointer;
+  font-family: inherit;
+  width: 75%;
+  background: var(--bg-dark);
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  color: var(--color-light);
+  border: 2px solid var(--color-gray);
+}
+
+.read-more {
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  color: var(--text-links);
+}
+
+.apply-btn {
+  cursor: pointer;
+  font-family: inherit;
+  background-color: var(--highlighter);
+  color: var(--color-light);
+  width: fit-content;
+  border-radius: 25px;
+  padding: 1em 2em;
+  border: none;
+  transition: all 0.3s;
+}
+
+.horizontal-divider {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 2px;
+  background-color: var(--bg-dark);
+}
+
+.UTC-btn {
+  cursor: pointer;
+  font-family: inherit;
+  background-color: #241782;
+  color: var(--text-links);
+  width: fit-content;
+  border-radius: 20px;
+  padding: 0.25em 1em;
+  border: none;
+  transition: all 0.3s;
+}
+
+footer {
+  padding: 0 1.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Section 2: Relative Time Range */
+.col02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: inherit;
+  grid-area: "col02";
+}
+
+.col02 h4 {
+  padding: 0;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.col02 ul li {
+  cursor: pointer;
+  margin: 0.8em 0.5em;
+  list-style-type: none;
+}
+
+.load-btn {
+  cursor: pointer;
+  font-family: inherit;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border: none;
+  margin: 0.5em;
+}
+
+.exit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2.5%;
+  margin-right: 2.5%;
+}
+
+.exit-btn {
+  cursor: pointer;
+  background-color: #241782;
+  color: var(--text-links);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+}
+
+.exit-btn i {
+  font-size: 1.2em;
+}
+
+/* links */
+a {
+  color: var(--text-links);
+  font-size: 0.8rem;
+}
+
+/* media queries */
+@media (max-width: 800px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas: repeat(3, auto);
+    grid-template-areas: "col01" "col02";
+  }
+}
