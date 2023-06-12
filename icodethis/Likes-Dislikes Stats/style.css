@@ -1,1 +1,42 @@
+:root {
+  --bg: #f0f3bd;
+  --main: #ffffff;
+  --yellow-bar: #f6bd60;
+  --green-bar: #84a59d;
+  --text-dark: #22577a;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: var(--text-light);
+  display: grid;
+  place-items: center;
+  line-height: 1.4;
+  min-height: 100vh;
+}
+main {
+  width: 80%;
+  height: auto;
+  background-color: var(--bg-dark);
+  padding: 0.5rem;
+}
+
+/*
+.svg {
+  width: 10%;
+  height: 10%;
+  display: flex;
+}
+
+button {
+  display: FLEX;
+  justify-content: center;
+}
+*/
