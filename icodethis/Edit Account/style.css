@@ -1,0 +1,136 @@
+:root {
+  --bg-dark: #031e3a;
+  --brand: #c7731a;
+  --top-bottom: #063b74;
+  --inputs: #053161;
+  --text-light: #ede7d9;
+  --neutral: #0959ae;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--lightest);
+  display: grid;
+  place-items: center;
+  line-height: 1.4;
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  margin: 2em 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "header" "inputs" "date" "buttons";
+  border-radius: 10px;
+  color: var(--text-light);
+}
+
+/* section 1: header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: "header";
+  padding: 1.5rem 2rem;
+  background-color: var(--top-bottom);
+}
+
+header h3 {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+/* section 2+3: inputs */
+.inputs {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  grid-area: "inputs";
+  padding: 0.5rem 2rem;
+  gap: 1rem;
+  background-color: var(--inputs);
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 2rem 1rem 2rem;
+  grid-area: "date";
+  background-color: var(--inputs);
+  text-transform: uppercase;
+}
+
+input {
+  cursor: pointer;
+  font-family: inherit;
+  background: var(--inputs);
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border: 0.5px solid var(--neutral);
+}
+
+input::placeholder {
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--text-light);
+  font-size: 0.8rem;
+  font-weight: 300;
+  width: fit-content;
+}
+
+.inputs label {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 0.8rem;
+  width: fit-content;
+}
+
+/* section 4: buttons */
+.buttons {
+  grid-area: "buttons";
+  background-color: var(--top-bottom);
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
+  width: 25%;
+  color: var(--text-light);
+  border-radius: 5px;
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+}
+.cancel-btn {
+  border: none;
+  background: var(--inputs);
+}
+
+.save-btn {
+  border: none;
+  background: var(--brand);
+}
+
+/* typography */
+.name,
+.email,
+.date {
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+/* media queries */
