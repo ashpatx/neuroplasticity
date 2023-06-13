@@ -4,6 +4,7 @@
   --yellow-bar: #f6bd60;
   --green-bar: #84a59d;
   --text-dark: #22577a;
+  --text-gray: #353535;
 }
 
 * {
@@ -22,21 +23,65 @@ body {
   min-height: 100vh;
 }
 main {
+  font-family: "Poppins", sans-serif;
   width: 80%;
   height: auto;
-  background-color: var(--bg-dark);
-  padding: 0.5rem;
+  background-color: var(--bg);
+  color: var(--text-gray);
+  padding: 1rem;
 }
 
-/*
-.svg {
-  width: 10%;
-  height: 10%;
+.chart {
+  width: auto;
+  height: 100%;
   display: flex;
+  justify-content: center;
+  font-family: inherit;
 }
 
-button {
-  display: FLEX;
+.chart-header {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  font-family: "inherit";
 }
-*/
+
+.chart-header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.chart-header p {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.chart-header svg {
+  width: 10%;
+  height: auto;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.details button {
+  font-size: 0.8rem;
+  cursor: pointer;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  align-self: center;
+  background-color: var(--bg);
+  border: 1px solid var(--text-dark);
+  color: var(--text-dark);
+  font-family: inherit;
+}
