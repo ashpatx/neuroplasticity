@@ -34,22 +34,14 @@ new Chart(myChart, {
       padding: 20
     },
     plugins: {
-      title: {
-        display: true,
-        text: "Custom Chart Title",
-        color: "#1b263b"
-      },
-      subtitle: {
-        display: true,
-        text: "XxX Chart Subtitle",
-        color: "#1b263b"
-      },
       legend: {
         position: "bottom",
         fontColor: "#1b263b",
         labels: {
           color: "#1b263b",
-          padding: 10
+          padding: 10,
+          usePointStyle: true,
+          pointStyle: "rectRounded"
         }
       }
     }
