@@ -1,11 +1,96 @@
-body {
-    min-width: 300px;
+:root {
+    --light: #f7ebfd;
+    --orange:#ff930a;
+    --light-purple:#9f21e3;
+    --medium-purple:#6910a8;
+    --dark-purple:#461873;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight:500;
+    font-size:18px;
+    min-height: 100vh;
+  }
+
+  body::after {
+    content: "";
+    background-image: url(images/bg-main-desktop.png);
+    background-size: cover;
+    width: 45rem;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
 }
 
-.attribution {
-     font-size: 11px; text-align: center; 
+  main {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:1rem 2rem;
+    gap:2rem;
+  }
+
+  /* left section */
+  .card-display {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 50rem;
+    width: 100%;
+  }
+
+
+  .cardlayout {
+    width: 40rem;
+    height: 20rem;
+    box-shadow: 0px 39px 60px 0px hsla(0, 0%, 0%, 0.14);
+    border-radius: 1rem;
+  }
+
+ .card-front-view {
+    background-image: url(./images/bg-card-front.png);
+    background-position: center;
+    background-size:cover;
+    position: relative;
+}
+.card-back-view {
+    position:relative;
+    background-image: url(./images/bg-card-back.png);
+    background-position: center;
+    background-size:cover;
+    margin-left:auto;
 }
 
+.back-cvc-display {
+    transform:translate(12em, 3em);
+    width:fit-content;
+}
+
+.logo {
+    height:2em;
+    width:100%;
+    margin-left:1em;
+    margin-top:1em;
+    background:transparent url('./images/card-logo.svg') no-repeat;
+    background-size: contain;
+    align-self:flex-start;
+}
+/* attribution */
+footer { 
+    font-size: 12px; 
+    text-align: center; 
+    color: var(--light);
+}
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--light-purple); 
+    text-decoration:none;
 }

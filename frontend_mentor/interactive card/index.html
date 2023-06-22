@@ -7,88 +7,79 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive card details form</title>
-
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
 
 </head>
 <body>
-  <main>
-    <div class="pg-wrapper">
-      <!--left section card view: col01-->
-      <div class="col01">
-        <div class="cards-container">
-        <!--frontal card view-->
-          <div class="card-front-view">
-            <img src="./images/bg-card-front.png" alt="front credit card">
-            <div class="card">
-              <img src="./images/card-logo.svg" alt="logo">
-              <h1 id="cc-number">0000 0000 0000 0000</h1>
-              <div class="card-info">
-                <span id="cc-name">Jane Appleseed</span>
-                <span id="cc-date">
-                  <span id="date-month">00</span>
-                  /
-                  <span id="date-year">00</span>
-                </span>
-              </div>
+ <main>
+      <!--left section card view-->
+      <section class="card-display">
+      <!--front card view-->
+        <div class="card-front-view cardlayout">
+            <div class="logo"></div>  
+            <p class="cc-number">0000 0000 0000 0000</p>
+            <div class="card-front-details">
+            <p class="cc-name">Jane Appleseed</p>
+            <p class="cc-expdate">00/00</p>
             </div>
-          </div>
-          <!--back card view-->
-          <div class="card-back-view">
-            <img src="images/bg-card-back.png" alt="back credit card">
-            <span id="cvc-code">000</span>
-          </div>
         </div>
-      </div>
-      <!--right section info view: col02-->
-      <div class="col02">
-        <form>
+              
+      <!--back card view-->
+        <div class="card-back-view cardlayout">
+          <div class="card-back"></div> 
+          <p class="back-cvc-display">000</p>
+        </div>
+    </section>
+      <!--right section info view-->
+      <section class="input-card-details">
+        <form action="#">
           <!--card name-->
-          <section class="cardholder-name-container">
+          <div class="input-area"> 
             <label for="input-card-name">Cardholder Name</label>
-            <input type="text" placeholder="e.g. Jane Appleseed" id="input-card-name" required />
-          </section>
+            <input id="input-card-name" type="text" name="input-card-name" placeholder="e.g. Jane Appleseed" oninput="inputCardName()" required />
+            <span class="error-msg name"></span>
+          </div> 
           <!--card number-->
-          <section class="cardholder-number-container">
-            <label for="input-card-number">Cardholder Name</label>
-            <input type="number" minlength="16" maxlength="16" placeholder="e.g. 1234 5678 9123 0000" id="input-card-number" required />
-          </section>
-          <!--card info-->
-          <section class="cardholder-date-container">
-            <div id="input-card-date">
-              <label for="input-card-date">Exp. Date (MM/YY)</label>
-            <div id="input-card-date-details">
-              <div>
-                <input type="number" placeholder="MM" minlength="2" maxlength="2" id="input-card-date-month" required />
+          <div class="input-area">   
+            <label for="input-card-number">Card Number</label>
+            <input id="input-card-number" type="number" name="input-card-number" minlength="16" maxlength="16" placeholder="e.g. 1234 5678 9123 0000" id="input-card-number" oninput="inputCardNumber()" required />
+            <span class="error-msg number"></span>
+          </div>  
+            <!--card date info-->
+          <div class="input-area-container">
+            <div class="input-area"> 
+              <label for="month" class="label-expdate">Exp. Date (MM/YY)</label>
+                <input type="number" name="month" minlength="2" maxlength="2" placeholder="MM" oninput="inputMM()" required />
+                <input type="number" name="year" minlength="2" maxlength="2" placeholder="YY" oninput="inputYY()" required />
+                <span class="error-msg date"></span>
               </div>
-              <div>
-                <input type="number" placeholder="YY" minlength="2" maxlength="2" id="input-card-date-year" required />
+          </div>  
+          <div class="input-area"> 
+              <label for="input-card-cvc" class="label-cvc">CVC</label>
+                <input class="input-cvc" type="number" minlength="3" maxlength="3" placeholder="e.g. 123" oninput="inputCVC()" required />
+              <span class="error-msg name"></span>
               </div>
-              </div> 
-              </div> 
-              </section>
-            <section class="cardholder-cvc-container">
-              <label for="card-cvc">CVC</label>
-              <input type="number" placeholder="e.g. 123" minlength="3" maxlength="3" id="card-cvc" required />
-            </section>
-          </div>
           <button id="submit-btn" type="submit">Confirm</button>
         </form> 
+   
         <div class="thanks-msg">
           <img src="./images/icon-complete.svg" alt="complete" />
-          <h1>Thank you!</h1>
+          <h2">Thank you!</h2>
           <p>We have successfully added your card details</p>
           <button>Continue</button>
         </div>
-      </div>
-
-    </div>
-
+      </section>
   </main>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://twitter.com/ashpatx" target="_blank">@ashpatx</a>.
-  </div>
+  <!--attribution-->
+  <footer class="attribution">
+    ⭐ Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+    ⭐ Completed by <a href="https://twitter.com/ashpatx" target="_blank">@ashpatx ⭐</a>
+  </footer>
+
+  <!--js script-->
+  <script src="app.js"></script>
+
 </body>
 </html>
