@@ -1,0 +1,91 @@
+:root {
+  --bg: #325cd9;
+  --light-blue: #5d78fa;
+  --pink: #ff5868;
+  --text-light: #f9f8ff;
+  --text-hover: #c6fced;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text-light);
+  line-height: 1.4;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.status {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 300;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* box 1 + 3: process + save */
+.process,
+.save {
+  background-color: var(--light-blue);
+}
+
+.status div:first-of-type,
+.error div:last-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* box 2: error */
+.error {
+  background-color: var(--pink);
+}
+
+/* exit button */
+.process button,
+.save button {
+  border: none;
+  color: var(--text-light);
+  background-color: var(--light-blue);
+}
+
+.error button {
+  border: none;
+  color: var(--text-light);
+  background-color: var(--pink);
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 30%;
+  font-size: 0.9rem;
+  gap: 0.2rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--pink);
+}
