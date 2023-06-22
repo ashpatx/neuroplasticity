@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <main>
+    <!--box 1: process -->
+    <div id="notification" class="process status">
+      <div>
+        <i class="fa-solid fa-check"></i>
+        <p>Payment successfully processed.</p>
+      </div>
+      <div>
+        <button id="exit-btn"><i id="exit" class="fa-solid fa-x"></i></button>
+      </div>
+    </div>
+    <!--box 2: error -->
+    <div id="notification" class="error status">
+      <div>
+        <i class="fas fa-exclamation-triangle"></i>
+        <p>An error occurred while processing your request.</p>
+      </div>
+      <div>
+        <p>Try again</p>
+        <button id="exit-btn"><i id="exit" class="fa-solid fa-x"></i></button>
+      </div>
+    </div>
+    <!--box 3:save -->
+    <div id="notification" class="save status">
+      <div>
+        <i class="fa-solid fa-check"></i>
+        <p>Your changes have been saved.</p>
+      </div>
+      <div>
+        <button id="exit-btn"><i class="fa-solid fa-x"></i></button>
+      </div>
+    </div>
+    </div>
+    <footer>
+      💻 Challenge from<a href="https://icodethis.com/app" target="_blank">iCodeThis</a>
+    </footer>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
