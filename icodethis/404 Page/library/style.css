@@ -1,0 +1,17 @@
+:root {
+    --green: #374520;
+    --brown: #825E3D;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient( var(--green), var(--brown)) fixed;
+}
+
+svg {
+    stroke: transparent;
+    stroke-width: 0px;
+}
