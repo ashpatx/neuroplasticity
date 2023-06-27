@@ -1,0 +1,139 @@
+:root {
+  --white: #fcf7ff;
+  --accent: #968ab6;
+  --light-blue: #006eb7;
+  --dark-blue: #2b236d;
+  --tan: #fffade;
+  --gray: #494454;
+  --purple: #cfb8ff;
+  --font: "Inter", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--tan);
+  display: grid;
+  text-align: center;
+  place-items: center;
+  line-height: 1.4;
+}
+
+.container {
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 1px 2px 8px 1px var(--accent);
+  width: 80%;
+}
+
+nav {
+  color: var(--gray);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+#nav-link {
+  text-decoration: none;
+}
+
+a {
+  color: var(--light-blue);
+  font-family: inherit;
+}
+
+main {
+  color: var(--dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+
+p {
+  color: var(--gray);
+}
+
+.subtitle {
+  margin: auto;
+  width: 75%;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+form {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+input {
+  margin-bottom: 1rem;
+  padding: 1rem 0.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--dark-blue);
+}
+
+input::placeholder {
+  color: var(--gray);
+  font-size: 1rem;
+}
+
+.submit-btn {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--dark-blue);
+  box-shadow: 1px 2px 8px 1px var(--accent);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  margin-bottom: 5rem;
+}
+
+/* footer */
+footer {
+  margin-top: 5rem;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.2rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--dark-blue);
+}
+
+a {
+  text-decoration: none;
+  color: var(--light-blue);
+  font-weight: 500;
+}
