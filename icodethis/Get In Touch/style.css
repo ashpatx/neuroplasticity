@@ -1,0 +1,145 @@
+:root {
+  --purple: #f9ebff;
+  --blue: #1d18d5;
+  --dark-gray: #4a4453;
+  --light-gray: #afa8ba;
+  --font: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    -70deg,
+    var(--purple),
+    var(--purple) 50%,
+    var(--blue) 50%,
+    var(--blue)
+  );
+  color: black;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "section01" "section02";
+  grid-template-rows: auto;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/*sections*/
+.section01 {
+  grid-area: "section01";
+  display: grid;
+  place-items: center;
+}
+
+.section01 .social-container {
+  box-shadow: 1px 1px 12px 1px var(--dark-gray);
+  border: 3px solid var(--purple);
+}
+
+.section02 {
+  grid-area: "section02";
+  display: grid;
+  place-items: center;
+}
+
+.section02 .social-container {
+  box-shadow: 1px 1px 12px 1px var(--dark-gray);
+  border: 3px solid var(--blue);
+}
+
+/* social links */
+.social-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  width: 30%;
+  gap: 1rem;
+  height: auto;
+  border-radius: 20px;
+}
+
+.exit {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.credit-box {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  padding: 0 1rem;
+  margin: 0 1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.social-contact-link {
+  color: black;
+  padding: 0.25rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.social-contact-link:hover {
+  color: var(--purple);
+  transform: scale(1.2);
+}
+
+.desc {
+  text-transform: uppercase;
+}
+
+/*footer section*/
+footer {
+  background-color: #6b76ff;
+  color: #feffe0;
+  padding: 20px;
+  text-align: center;
+  font-size: 1vw;
+}
+
+.ri-heart-fill {
+  color: pink;
+}
+
+/*button*/
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  margin-top: 1rem;
+}
+
+.section01 button {
+  background-color: var(--purple);
+  box-shadow: 1px 2px 8px 1px var(--purple);
+  color: var(--blue);
+}
+
+.section02 button {
+  background-color: var(--blue);
+  box-shadow: 1px 2px 8px 1px var(--blue);
+  color: var(--purple);
+}
