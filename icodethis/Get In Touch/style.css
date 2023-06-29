@@ -1,9 +1,11 @@
 :root {
-  --purple: #f9ebff;
+  --tan: #fffade;
+  --tan-white: #fcf7ff;
   --blue: #1d18d5;
+  --accent: #7c6b9d;
   --dark-gray: #4a4453;
   --light-gray: #afa8ba;
-  --font: "Inter", sans-serif;
+  --font: "Manrope", sans-serif;
 }
 
 * {
@@ -18,13 +20,14 @@ body {
   width: 100vw;
   background: linear-gradient(
     -70deg,
-    var(--purple),
-    var(--purple) 50%,
+    var(--tan),
+    var(--tan) 50%,
     var(--blue) 50%,
     var(--blue)
   );
   color: black;
   display: grid;
+  place-content: center;
   grid-template-columns: 50% 50%;
   grid-template-areas: "section01" "section02";
   grid-template-rows: auto;
@@ -41,7 +44,9 @@ body {
 
 .section01 .social-container {
   box-shadow: 1px 1px 12px 1px var(--dark-gray);
-  border: 3px solid var(--purple);
+  background-color: var(--accent);
+  color: var(--tan);
+  border: 3px solid var(--tan);
 }
 
 .section02 {
@@ -53,68 +58,99 @@ body {
 .section02 .social-container {
   box-shadow: 1px 1px 12px 1px var(--dark-gray);
   border: 3px solid var(--blue);
+  background-color: var(--tan-white);
+  color: var(--blue);
 }
 
 /* social links */
 .social-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-size: 1.2rem;
-  width: 30%;
+  width: 40%;
+  padding: 0 3rem;
   gap: 1rem;
   height: auto;
   border-radius: 20px;
 }
 
+.social-header {
+  display: grid;
+  grid-template-columns: 101% 1%;
+  grid-template-areas: "credit-box" "exit";
+  grid-template-rows: auto;
+}
+
 .exit {
-  display: flex;
-  justify-content: flex-end;
+  cursor: pointer;
+  grid-area: "exit";
+  font-weight: 300;
 }
 
 .credit-box {
   width: fit-content;
-  display: flex;
-  justify-content: center;
-  background-color: black;
-  color: white;
-  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   padding: 0 1rem;
   margin: 0 1rem;
+  grid-area: "credit-box";
+}
+
+.section01 .credit-box {
+  background-color: var(--tan);
+  color: var(--blue);
+}
+
+.section02 .credit-box {
+  background-color: var(--blue);
+  color: var(--tan);
 }
 
 .social-links {
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
+  gap: 0.5rem;
 }
 
 .social-contact-link {
   color: black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   padding: 0.25rem;
   text-decoration: none;
   font-size: 1.6rem;
 }
 
+.section01 .social-contact-link {
+  border: 1px solid var(--tan);
+}
+
+.section02 .social-contact-link {
+  border: 1px solid var(--blue);
+}
+
 .social-contact-link:hover {
-  color: var(--purple);
+  color: pink;
   transform: scale(1.2);
 }
 
 .desc {
   text-transform: uppercase;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 0.9rem;
 }
 
 /*footer section*/
 footer {
-  background-color: #6b76ff;
-  color: #feffe0;
-  padding: 20px;
-  text-align: center;
-  font-size: 1vw;
-}
-
-.ri-heart-fill {
-  color: pink;
 }
 
 /*button*/
@@ -126,20 +162,20 @@ button {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   font-family: inherit;
   margin-top: 1rem;
 }
 
 .section01 button {
-  background-color: var(--purple);
-  box-shadow: 1px 2px 8px 1px var(--purple);
+  background-color: var(--tan);
+  box-shadow: 1px 2px 8px 1px var(--accent);
   color: var(--blue);
 }
 
 .section02 button {
   background-color: var(--blue);
-  box-shadow: 1px 2px 8px 1px var(--blue);
-  color: var(--purple);
+  box-shadow: 1px 2px 8px 1px var(--accent);
+  color: var(--tan);
 }
