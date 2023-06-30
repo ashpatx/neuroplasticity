@@ -1,0 +1,140 @@
+:root {
+  --font: "Manrope", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+  -ms-overflow-style: none; /*IE, Edge*/
+  -scrollbar-width: none; /*Firefox*/
+}
+
+*::-webkit-scrollbar {
+  display: none; /*remove annoying scroll*/
+}
+
+.board-container {
+  min-height: 100vh;
+  width: 100%;
+  overflow: scroll;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(45deg, #000000 0%, #3730a3 100%);
+  line-height: 1.4;
+}
+
+/* nav */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 2rem 4rem;
+}
+
+.user {
+  color: #e0e7ff;
+  font-weight: 600;
+}
+
+/* board form*/
+#todo-form {
+  padding: 0;
+}
+
+#todo-form input {
+  padding: 12px;
+  margin-right: 12px;
+  width: 225px;
+
+  border-radius: 5px;
+  border: none;
+
+  box-shadow: 0px 5px 15px #a3a3a3;
+  background: white;
+
+  outline: none;
+}
+
+#todo-form input::placeholder {
+  color: black;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+#todo-form button {
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 5px 15px #404040;
+  background: #312e81;
+  color: #e0e7ff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+.lanes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 4rem;
+  padding: 2rem 4rem;
+  margin-top: 4rem;
+  overflow: scroll;
+  height: 100%;
+}
+
+.lane-header {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  color: #e0e7ff;
+}
+
+/* individual task */
+.lane-column {
+  box-shadow: 0px 5px 15px #a3a3a3;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem;
+  border-radius: 5px;
+  width: 20%;
+  min-height: 150px;
+  flex-shrink: 0;
+}
+
+.lane-column:hover {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(45deg, #312e81 0%, #000000 100%);
+  transition-delay: 5s;
+  transition-timing-function: ease-in;
+}
+
+.task {
+  cursor: move;
+  background-color: #ddd6fe;
+  color: #171717;
+  box-shadow: 0px 5px 15px #171717;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.task:hover {
+  background-color: #312e81;
+  color: #e0e7ff;
+}
+
+/*new class from drag+drop JS function*/
+.is-dragging {
+  scale: 1.05;
+  box-shadow: 0px 5px 15px #ddd6fe;
+  background-color: black;
+  color: #c7d2fe;
+}
