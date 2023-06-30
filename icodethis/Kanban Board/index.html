@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanban 2</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+
+  <script src="main.js" defer></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+  <!--boards-->
+  <div class="board-container">
+    <header>
+      <!-- add a new task -->
+      <form id="todo-form">
+        <input type="text" placeholder="To Do..." id="todo-input" required />
+        <button type="submit"><i class="ri-add-line"></i></button>
+      </form>
+      <!-- user -->
+      <div class="user">
+        <p><i class="ri-user-line"></i> Ash's Board <i class="ri-arrow-down-s-line"></i></p>
+      </div>
+    </header>
+
+    <!--divider between boards-->
+    <div class="lanes">
+      <!--Board 1: To Do-->
+      <section class="lane-column" id="todo-lane">
+        <h3 class="lane-header">to do...</h3>
+        <p class="task" draggable="true">🛒 get groceries</p>
+        <p class="task" draggable="true">✍ research</p>
+        <p class="task" draggable="true">📚 read saved articles</p>
+        <p class="task" draggable="true">🧹 clean, clean, clean</p>
+      </section>
+
+      <!--Board 2: In Progress-->
+      <section class="lane-column">
+        <h3 class="lane-header">In Progress</h3>
+        <p class="task" draggable="true">🔫 not procrastinating
+        <p class="task" draggable="true">🎨 convert this to tailwind</p>
+      </section>
+
+      <!--Board 3: Done-->
+      <section class="lane-column">
+        <h3 class="lane-header">Done</h3>
+        <p class="task" draggable="true">🚴‍♀️ cycle</p>
+        <p class="task" draggable="true">😫 code challenge</p>
+        <p class="task" draggable="true">📔 journal</p>
+      </section>
+
+    </div>
+
+</body>
+
+</html>
