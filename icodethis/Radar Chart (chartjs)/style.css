@@ -1,11 +1,10 @@
 :root {
-  --bg-dark: #1c4863;
-  --border: #307dab;
-  --main: #08141b;
-  --pink-bar: #e1ad93;
-  --green-bar: #dbe193;
-  --blue-bar: #93c4e1;
-  --text-light: #f6fafd;
+  --bg-blue: #eceeff;
+  --bg-light: #fff6f5;
+  --pink: #ffa09e;
+  --blue: #6b7ccf;
+  --dark-gray: #3c4856;
+  --light-gray: #a0acbd;
 }
 
 * {
@@ -16,19 +15,73 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text-light);
-  display: grid;
-  place-items: center;
   line-height: 1.4;
   min-height: 100vh;
 }
 
+/* user container */
 .header {
-  background-color: var(--bg-dark);
-  height: 10%;
+  background-color: var(--bg-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.users {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+  background-color: var(--bg-light);
+  height: auto;
+  border-radius: 70px;
+}
+
+.user-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* user profile */
+.img01 {
+  background-image: url("https://images.unsplash.com/photo-1679779092896-9a86d0fcbde6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80");
+  background-size: cover;
+  background-position: top;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 5px solid var(--blue);
+}
+
+.img02 {
+  background-image: url("https://images.unsplash.com/photo-1683888063216-ccf69e385c98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60");
+  background-size: cover;
+  background-position: top;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 5px solid var(--pink);
+}
+
+.name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+p {
+  font-weight: 400;
+  font-size: 0.7rem;
 }
 
 .chart-area {
-  background-color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 3rem 2rem;
+  min-width: 50%;
 }
