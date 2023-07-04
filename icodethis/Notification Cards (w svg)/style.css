@@ -1,0 +1,144 @@
+:root {
+  --font: "Manrope", sans-serif;
+  --bg: #efe3de;
+  --text: #151515;
+  --green: #a8e26f;
+  --blue: #98ecdc;
+  --pink: #ff9eb9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.4;
+  font-family: "Manrope", sans-serif;
+}
+
+.notification-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+  width: 80%;
+}
+
+/* notification box */
+.status {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 300;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* box 1 + 3: process + save */
+.process,
+.save {
+  background-color: var(--light-blue);
+}
+
+.status div:first-of-type,
+.error div:last-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* box 2: error */
+.error {
+  background-color: var(--pink);
+}
+
+/* exit button */
+.green button {
+  border: none;
+  color: var(--text-light);
+  background-color: var(--light-blue);
+}
+
+/* svg backdrop */
+#noiseFilter {
+  width: 250px;
+  height: 250px;
+  filter: contrast(170%) brightness(1000%);
+  background: linear-gradient(0deg, rgba(0, 0, 255, 1), rgba(0, 0, 0, 0)),
+    url(/👆/that/noise.svg);
+}
+
+body::before,
+body::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  opacity: 40%;
+}
+
+body::before {
+  background: #8c8c8c;
+  filter: url(#noiseFilter);
+}
+
+/* Blobs */
+.blob-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+  height: 500px;
+  width: 500px;
+  position: relative;
+  right: 5em;
+}
+
+.blob {
+  border-radius: 100px;
+  filter: blur(60px);
+}
+
+.green01 {
+  background-color: var(--green);
+  position: absolute;
+  top: 80px;
+  right: -20px;
+  height: 200px;
+  width: 250px;
+}
+
+.green02 {
+  background-color: var(--blue);
+  position: absolute;
+  top: 0px;
+  right: -10px;
+  height: 200px;
+  width: 250px;
+}
+
+.green03 {
+  background-color: var(--pink);
+  position: absolute;
+  top: 100px;
+  right: -30px;
+  height: 200px;
+  width: 250px;
+}
