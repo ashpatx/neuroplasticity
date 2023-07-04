@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notification</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <script src="main.js" defer></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+  <div class="pg-wrapper">
+
+    <!--notification element-->
+    <div class="notification-wrapper">
+
+      <div id="notification" class="green status">
+        <div>
+          <i class="fa-solid fa-check"></i>
+          <h4>Thank you for subscribing!</h4>
+        </div>
+        <div>
+          <button id="exit-btn"><i id="exit" class="fa-solid fa-x"></i></button>
+        </div>
+      </div>
+      <!--box 2: error -->
+      <div id="notification" class="red status">
+        <div>
+          <i class="fas fa-exclamation-triangle"></i>
+          <p>An error occurred while processing your request.</p>
+        </div>
+        <div>
+          <button id="exit-btn"><i id="exit" class="fa-solid fa-x"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- blob -->
+    <div class="blob-cont">
+      <div class="green01 blob"></div>
+      <div class="green02 blob"></div>
+      <div class="green03 blob"></div>
+
+    </div>
+
+    <!-- svg layer -->
+    <svg>
+      <filter id='noiseFilter'>
+        <feTurbulence type='fractalNoise' baseFrequency='1.5' stitchTiles='stitch' />
+        <feColorMatrix in="colorNoise" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+        <feComposite operator="in" in2="SourceGraphic" result="monoNoise" />
+        <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+
+      </filter>
+
+    </svg>
+  </div>
+</body>
+
+</html>
+
+
+
