@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Summary</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Pizza Hut Header -->
+  <div class="container">
+    <div class="header-bg"></div>
+    <div class="pizza-img"></div>
+    <div class="pizza-desc">
+      <p>Your order from</p>
+      <h4>Domino's Pizza</h4>
+    </div>
+    <!-- Grid Row 1: Item 1-->
+    <div class="item">
+      <div class="item-title">
+        <p>Margherita Pizza | Medium</p>
+      </div>
+      <div class="item-quantity">
+        <i class="ri-subtract-line"></i>
+        <p>1</p>
+        <i class="ri-add-line"></i>
+      </div>
+      <div class="price">
+        <p>$10.00</p>
+        <i class="ri-close-circle-line"></i>
+      </div>
+    </div>
+    <!-- Grid Row 1: Item 2-->
+    <div class="item">
+      <div class="item-title">
+        <p>Margherita Pizza | Medium</p>
+
+      </div>
+      <div class="item-quantity">
+        <i class="ri-subtract-line"></i>
+        <p>1</p>
+        <i class="ri-add-line"></i>
+      </div>
+      <div class="price">
+        <p>$10.00</p>
+        <i class="ri-close-circle-line"></i>
+      </div>
+    </div>
+    <!-- Button: Add a Beverage -->
+    <div id="bev-button">
+      <button class="bev-btn"><i class="ri-add-circle-line"></i> Add a beverage</button>
+    </div>
+    <!-- Grid Row 2: Total Amount -->
+    <section class="total-section">
+      <div class="total-row">
+        <p>Subtotal</p>
+        <p>$20.00</p>
+      </div>
+      <div class="total-row">
+        <p>Taxes</p>
+        <p>$2.00</p>
+      </div>
+      <div class="total-row">
+        <p>Total (Taxes incl.)</p>
+        <p>$22.00</p>
+      </div>
+    </section>
+    <!-- Button: Checkout -->
+    <div id="checkout-button">
+      <button class="checkout-btn"><i class="ri-shopping-cart-line"></i> Checkout</button>
+    </div>
+  </div>
+</body>
+
+</html>
