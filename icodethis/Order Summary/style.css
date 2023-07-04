@@ -1,0 +1,175 @@
+:root {
+  --red: #d1373c;
+  --blue: #235595;
+  --neutral: #f3eed9;
+  --text-black: #000;
+  --light-gray: #c5c5c5;
+  --dark-gray: #3d3d3d;
+  --font: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  display: grid;
+  place-items: center;
+  line-height: 1.4;
+  min-height: 100vh;
+  background-color: var(--blue);
+}
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  min-width: 25%;
+  height: auto;
+}
+
+/*header red bg*/
+.header-bg {
+  height: 100px;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  background-color: var(--red);
+}
+
+/* HEADER */
+.pizza-img {
+  background-image: url("https://cdn.worldvectorlogo.com/logos/dominos-pizza-1.svg");
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0px 5px 15px var(--light-gray);
+  top: -25px;
+}
+
+.pizza-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Item Order */
+.item {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 0.6fr 0.2fr 0.2fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "item-title" "item-quantity" "price";
+  text-align: center;
+  vertical-align: center;
+  padding: 0 0.2rem;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.item-title {
+  grid-area: "item-title";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-quantity {
+  grid-area: "item-quantity";
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.price {
+  grid-area: "price";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Button 1: Beverage Button */
+#bev-button {
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+
+.bev-btn {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 50%;
+  border: 1px solid var(--dark-gray);
+  box-shadow: 0px 5px 15px var(--light-gray);
+  color: black;
+  font-weight: 400;
+  font-family: inherit;
+  font-size: 0.8rem;
+  outline: var(--dark-gray);
+}
+
+/* Grid Row 2: Total Amount */
+.total-section {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-gray);
+  border-radius: 5px;
+  color: black;
+  gap: 0.5rem;
+  padding: 1rem;
+  font-weight: 400;
+  font-family: inherit;
+  font-size: 0.7rem;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Button 2: Checkout */
+#checkout-button {
+  margin: 1rem;
+}
+
+.checkout-btn {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 100%;
+  border: none;
+  box-shadow: 0px 5px 15px var(--light-gray);
+  background: var(--red);
+  color: white;
+  font-weight: 400;
+  font-family: inherit;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 700px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .bev-btn {
+    width: 100%;
+  }
+
+  .item,
+  .total-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
