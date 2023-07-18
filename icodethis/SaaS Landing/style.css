@@ -1,0 +1,185 @@
+:root {
+  --bg-dark-purple: #120034;
+  --bg-light-purple: #1e0057;
+  --btn-light-purple: #9445ff;
+  --icon-light-purple: #cfacff;
+  --text-neutral-purple: #f0e5ff;
+  --text-light-purple: #ae73ff;
+  --text-dark-purple: #4d4d4d;
+  --accent: #6c63ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-dark-purple);
+  color: var(--text-neutral-purple);
+  line-height: 1.4;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--bg-light-purple);
+  width: 80%;
+  margin: 2rem 0;
+  padding: 2rem;
+  box-shadow: 5px 5px var(--bg-dark-purple);
+}
+
+/* NAVIGATION BAR */
+nav {
+  display: flex;
+  justify-content: end;
+  padding: 0.5rem;
+  gap: 1rem;
+  background-color: var(--bg-light-purple);
+  color: var(--text-neutral-purple);
+  align-items: center;
+  margin-bottom: 8rem;
+}
+
+.menu-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style-type: none;
+  font-weight: 400;
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: var(--text-neutral-purple);
+  font-size: 1.2rem;
+}
+
+.menu-links a:hover {
+  color: var(--text-light-purple);
+}
+
+/* BUTTON STYLING */
+.sign-in-btn {
+  margin: 0 1rem;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--accent);
+  color: var(--text-neutral);
+  font-family: "Poppins", sans-serif;
+}
+
+.sign-in-btn:hover {
+  background: var(--btn-light-purple);
+  box-shadow: none;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.content-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 50%;
+  gap: 1rem;
+}
+
+/* EMAIL FORM */
+.form-card form {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 1rem;
+}
+
+.form-card input {
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  border: 0.5px solid var(--text-neutral-purple);
+  background-color: var(--bg-light-purple);
+}
+
+.form-card input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: var(--text-neutral-purple);
+}
+
+.form-card input:focus {
+  outline: none;
+  border: 2px solid var(--bg-dark-purple);
+}
+
+/* svg */
+.svg-img {
+  width: 30%;
+}
+
+/* GRID SECTIONS */
+.grid {
+  display: flex;
+  background-color: var(--bg-dark-purple);
+  padding: 4rem;
+  gap: 4rem;
+  margin: 8rem 4rem 0;
+}
+
+.grid-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.grid-feature i {
+  color: var(--icon-light-purple);
+}
+
+/* TYPOGRAPHY */
+h2 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+button,
+p {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 390px) {
+  .container {
+    padding: 3rem 1rem;
+    width: 95%;
+  }
+  h2 {
+    text-align: center;
+  }
+  .content-header {
+    width: 100%;
+  }
+  .grid {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
