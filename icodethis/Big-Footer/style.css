@@ -1,0 +1,221 @@
+:root {
+  --pink: #dc0462;
+  --color-light-black: #181818;
+  --color-light-gray: #696969;
+  --color-dark-blue: #4776f0;
+  --color-light-blue: #87c2fc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #9999ff;
+  color: var(--color-light-black);
+  line-height: 1.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 1rem;
+}
+
+.content-container {
+  background-color: #ffffeb;
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 4px rgb(120, 121, 218, 0.4);
+}
+
+.content-row01 {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+}
+
+/*donate section*/
+.content-col-donate {
+  padding: 0.5rem;
+  width: 40%;
+  border-radius: 5px;
+  background-color: #efebff;
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  grid-template-rows: auto;
+  grid-template-areas: "svg" "donate-cta";
+  background-color: #efebff;
+  box-shadow: 0px 5px 15px #c2c2ff;
+  border: 0.5px solid #ebebff;
+}
+
+svg {
+  grid-area: "svg";
+  width: 100%;
+  height: 100%;
+}
+
+.donate-cta {
+  padding-left: 0.5rem;
+  grid-area: "donate-cta";
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.donate-cta h4 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.donate-cta p {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.content-col {
+  padding: 1rem;
+}
+
+content-col p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.content-col p:hover {
+  color: #d6d6ff;
+}
+
+/* menu styling */
+.menu-header {
+  color: var(--pink);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.content-follow {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.subscribe-btn {
+  border: none;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 5px 4px rgba(214, 214, 214, 0.8);
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+  background: linear-gradient(
+    to right,
+    var(--color-light-blue),
+    var(--color-dark-blue)
+  );
+}
+
+/*ad divider*/
+.divider {
+  width: 100%;
+  background-color: #ebebff;
+  color: black;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  box-shadow: inset 1px 1px 15px rgba(214, 214, 214, 0.3);
+  margin-top: 2rem;
+}
+
+/*Privacy Policy Section */
+.privacy-policy {
+  margin-top: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 0.9em;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.privacy-policy a {
+  text-decoration: none;
+}
+
+.privacy-policy p:hover {
+  color: var(--pink);
+}
+
+/* button styling */
+/*BUTTON STYLING*/
+.cta {
+  width: fit-content;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #38369a;
+  color: #ffffeb;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+}
+
+.cta:hover {
+  border: 1px solid var(--pink);
+}
+
+.light-btn {
+  width: fit-content;
+  padding: 0 0.5rem 0 0;
+  gap: 0.5rem;
+  border-radius: 20px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ffffeb;
+  border: #ebebff;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+.light-btn i {
+  font-size: 1.5rem;
+}
+
+.light-btn:hover {
+  color: var(--pink);
+}
+
+.socials i {
+  font-size: 1.5rem;
+}
+
+.socials i:hover {
+  color: var(--pink);
+}
