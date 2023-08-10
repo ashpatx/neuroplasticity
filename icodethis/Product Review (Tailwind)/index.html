@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glassy Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+</head>
+
+<body class="bg-slate-100 font-primary text-true-gray-700 flex justify-center items-center min-h-screen">
+  <!--Gradient Background-->
+  <div class="w-[38rem] h-[30rem] rounded-3xl bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-rose-100 to-teal-100 shadow-sm"></div>
+  <!-- White Container -->
+  <div class="w-[30rem] h-[35rem] bg-white absolute p-6 shadow-lg rounded-3xl gap-2">
+    <!--Exit-->
+    <div class="w-full flex justify-end">
+      <i class="ri-close-line bg-rose-50 px-2 py-1 rounded-full text-sm cursor-pointer hover:scale-110 transition-all"></i>
+    </div>
+    <!--Rating Box-->
+    <div>
+      <h3 class="font-semibold text-lg">Overall Rating</h3>
+      <div class="flex space-x-2">
+        <div class="border border-rose-50 hover:border-teal-500 p-1 transition-all">
+          <i class="ri-star-line text-true-gray-700 hover:text-teal-500 transition-all p-2"></i>
+        </div>
+        <div class="border border-rose-50 hover:border-teal-500 p-1 transition-all">
+          <i class="ri-star-line text-true-gray-700 hover:text-teal-500 transition-all p-2"></i>
+        </div>
+        <div class="border border-rose-50 hover:border-teal-500 p-1 transition-all">
+          <i class="ri-star-line text-true-gray-700 hover:text-teal-500 transition-all p-2"></i>
+        </div>
+        <div class="border border-rose-50 hover:border-teal-500 p-1 transition-all">
+          <i class="ri-star-line text-true-gray-700 hover:text-teal-500 transition-all p-2"></i>
+        </div>
+        <div class="border border-rose-50 hover:border-teal-500 p-1 transition-all">
+          <i class="ri-star-line text-true-gray-700 hover:text-teal-500 transition-all p-2"></i>
+        </div>
+      </div>
+      <span class="text-xs">Click to Rate</span>
+    </div>
+    <!--Review Title Input-->
+    <label for="review-text" class="block mt-2 text-sm font-medium text-gray-900">Review Title</label>
+    <input type="text" id="review-text" aria-describedby="review-text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Example: AI features make this an unbelievable deal!">
+    <!--Radio Buttons-->
+    <div class="mt-2">
+      <p class="block text-sm font-medium text-gray-900">Would you recommend this product to a friend?</p>
+      <div class="flex flex-wrap">
+        <div class="flex items-center mr-4">
+          <input id="yes-radio" type="radio" value="yes" name="recommend-radio" class="w-4 h-4 text-teal-400 bg-gray-100 border-gray-300 focus:ring-teal-400">
+          <label for="yes-radio" class="ml-2 text-sm font-medium text-gray-900">Yes</label>
+        </div>
+        <div class="flex items-center mr-4">
+          <input id="no-radio" type="radio" value="no" name="recommend-radio" class="w-4 h-4 text-rose-400 bg-gray-100 border-gray-300 focus:ring-rose-400">
+          <label for="no-radio" class="ml-2 text-sm font-medium text-gray-900">No</label>
+        </div>
+      </div>
+    </div>
+    <!--Review Detailed Input-->
+    <div class="mt-2">
+      <label for="review-detail" class="block text-sm font-medium text-gray-900">Product Review</label>
+      <input type="text" id="review-detail" aria-describedby="review-detail" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-rose-500 focus:border-teal-500 block w-full p-2.5" placeholder="Example: Great purchase. I recommend this to all my colleagues">
+    </div>
+    <!--name and email-->
+    <form>
+      <div class="mt-2 grid md:grid-cols-2 gap-4">
+        <div>
+          <label for="nick_name" class="block mb-2 text-sm font-medium text-gray-900">Nickname</label>
+          <input type="text" id="nick_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Example: Ash" required>
+        </div>
+        <div>
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
+          <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Example: hi@gmail.com" required>
+        </div>
+      </div>
+    </form>
+    <!--privacy policy-->
+    <div class="mt-2">
+      <span class="text-xs">You will be able to receive emails in connection with this review. All emails contian the option to unsubscribe. We can use the rating and review in other marketing.</span>
+    </div>
+    <!--button-->
+    <button class="font-small flex items-center mt-2 mb-2 px-4 py-2 w-fit outline outline-2 outline-transparent bg-teal-600 text-white rounded-full hover:outline-current hover:text-white hover:bg-rose-400 focus-visible:outline-current focus-visible:text-white active:scale-100">Submit Review</button>
+  </div>
+  </div>
+</body>
+
+</html>
