@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscribe Popup</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+</head>
+
+<body class="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-rose-100 to-teal-100 font-primary text-true-gray-700 flex justify-center items-center min-h-screen relative overflow-hidden " style="font-family: 'Manrope', sans-serif;">
+
+  <!-- Gradient Border Container -->
+  <div class="w-1/3 absolute flex justify-center items-center">
+    <div class="bg-gradient-to-r from-rose-600 to-teal-600 rounded-lg blur opacity-25 w-full h-full absolute transition-opacity duration-200 hover:opacity-900"></div>
+    <!-- White Container -->
+    <div class="w-full bg-white relative shadow-lg rounded-3xl gap-2 p-8">
+      <!--Exit-->
+      <div class="w-full flex justify-end">
+        <i class="ri-close-line bg-rose-50 mt-2 mr-2 px-2 py-1 rounded-full text-sm cursor-pointer hover:scale-110 transition-all"></i>
+      </div>
+      <!--Text and Email-->
+      <div class="flex flex-col items-center">
+        <h3 class="text-center font-semibold text-xl">Enjoyed the read?</h3>
+        <p class="text-center font-light text-md px-12 my-4">Join our monthly newsletter for helpful tips on design. We host virtual meetups for subscribers, around the world.</p>
+      </div>
+
+      <!-- Input Email -->
+      <form class="flex flex-col mx-14 mt-4">
+        <!--Review Title Input-->
+        <input type="email" id="email" class="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-500 focus:border-teal-500 block w-full p-2.5" placeholder="Enter your email here" required>
+
+        <!--Checkbox-->
+        <div class="mt-2 mb-2 flex gap-2 items-start">
+          <input checked id="checked-checkbox" type="checkbox" value="" class="w-8 h-8 text-teal-600 bg-gray-100 border-gray-300 rounded focus:ring-teal-500">
+          <label for="checked-checkbox" class="mt-2 cursor-pointer text-sm font-medium text-gray-900">I agree to receive this newsletter with the option to unsubscribe at any time.</label>
+        </div>
+
+        <!--Button-->
+        <button class="cursor-pointer font-medium flex justify-center items-center mt-2 mb-2 px-4 py-2 w-full rounded-lg outline outline-2 outline-transparent bg-teal-600 text-white rounded-full hover:outline-current hover:text-white hover:bg-rose-400 focus-visible:outline-current focus-visible:text-white active:scale-100">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!--color blobs-->
+  <div class="flex gap-[12rem] -z-[1] blur">
+    <div class="rounded-full aspect-square h-40 bg-gradient-to-b from-rose-200 to-rose-300 self-start"></div>
+    <div class="rounded-full aspect-square h-60 bg-gradient-to-tr from-teal-200 to-teal-300 self-end"></div>
+  </div>
+</body>
+
+</html>
