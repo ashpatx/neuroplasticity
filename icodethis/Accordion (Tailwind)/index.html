@@ -7,92 +7,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accordion</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
+  <script src="main.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
-
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
-
 </head>
 
-<body class="bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-indigo-200 via-yellow-100 to-cyan-200 font-primary text-true-gray-700 flex justify-center items-center min-h-screen relative overflow-hidden " style="font-family: 'Manrope', sans-serif;">
+<body class="bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-indigo-200 via-yellow-100 to-cyan-200 font-primary text-true-gray-700 flex justify-center items-center min-h-screen relative overflow-hidden" style="font-family: 'Manrope', sans-serif;">
 
   <!-- Overlay Blur Effect -->
   <div class="bg-slate-100/40 from-indigo-200 via-yellow-100 to-cyan-200 absolute inset z-1 backdrop-blur-lg"></div>
 
   <!-- White Container -->
   <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 bg-slate-50/80 shadow-lg rounded-3xl gap-2 p-8">
-    <!--Exit-->
+    <!-- Exit -->
     <div class="w-full flex justify-end">
       <i class="ri-close-line bg-rose-50 mt-2 mr-2 px-2 py-1 rounded-full text-sm cursor-pointer hover:scale-110 transition-all"></i>
     </div>
-    <!--Text and Email-->
+    <!-- Text and Email -->
     <div class="flex flex-col items-start">
       <h2 class="text-start font-semibold text-xl">The Accordion</h2>
-      <p class="text-start font-light text-md my-4">The accordion is a graphical control element comprised of a vertically stacked list of items such as labels and thumbnails. Each item can be "expaned" or "collapsed" to reveal the content associated with that item.</p>
+      <p class="text-start font-light text-md my-4">The accordion is a graphical control element comprised of a vertically stacked list of items such as labels and thumbnails. Each item can be "expanded" or "collapsed" to reveal the content associated with that item.</p>
     </div>
 
     <!-- Accordion Section -->
-    <!-- Accordion 1 -->
-    <div id="accordion-color" data-accordion="collapse" data-active-classes="bg-blue-100 text-blue-600">
-      <h2 id="accordion-color-heading-1">
-        <button type="button" class="flex items-center justify-start gap-2 w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200" data-accordion-target="#accordion-color-body-1" aria-expanded="true" aria-controls="accordion-color-body-1">
-          <i class="ri-add-circle-line"></i>
-          <span>What is an accordion?</span>
-        </button>
-      </h2>
-      <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
-        <div class="p-5 border border-b-0 border-gray-200">
-          <p class="mb-2 text-gray-500 text-sm">The accordion typically consists of a series of sections or panels, where each panel contains a header (often a clickable element) and a content area. When a header is clicked, its corresponding content area expands or collapses, revealing or hiding the content within. This is often achieved using CSS for styling and animations, along with JavaScript for handling the interactive behavior.</p>
-          <p class="text-gray-500 text-sm">Learn more here <a href="https://www.w3schools.com/howto/howto_js_accordion.asp" class="text-blue-600 hover:underline">get started</a> and start testing it out!</p>
+    <ul class="space-y-4">
+      <!-- Accordion 1 -->
+      <li class="group" id="accordion-color-1">
+        <h2>
+          <button type="button" class="flex items-center justify-start gap-2 w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200" data-accordion-target="#accordion-color-body-1" aria-expanded="false">
+            <i class="ri-add-circle-line"></i> <!-- Initial icon markup -->
+            <span>What is an accordion?</span>
+          </button>
+        </h2>
+        <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
+          <div class="p-5 border border-b-0 border-gray-200">
+
+            <p class="mb-2 text-gray-500 text-sm">The accordion typically consists of a series of sections or panels, where each panel contains a header (often a clickable element) and a content area. When a header is clicked, its corresponding content area expands or collapses, revealing or hiding the content within. This is often achieved using CSS for styling and animations, along with JavaScript for handling the interactive behavior.</p>
+            <p class="text-gray-500 text-sm">Learn more here <a href="https://www.w3schools.com/howto/howto_js_accordion.asp" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">get started</a> and start testing it out!</p>
+          </div>
         </div>
-      </div>
+      </li>
       <!-- Accordion 2 -->
-      <div id="accordion-color" data-accordion="collapse" data-active-classes="bg-blue-100 text-blue-600">
-        <h2 id="accordion-color-heading-2">
-          <button type="button" class="flex items-center justify-start gap-2 w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200" data-accordion-target="#accordion-color-body-2" aria-expanded="true" aria-controls="accordion-color-body-2">
+      <li class="group" id="accordion-color-2">
+        <h2>
+          <button type="button" class="flex items-center justify-start gap-2 w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200" data-accordion-target="#accordion-color-body-2" aria-expanded="false">
             <i class="ri-add-circle-line"></i>
-            <span>When and how should it be used?</span>
+            <span>When and how should accordions be used?</span>
           </button>
         </h2>
         <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
           <div class="p-5 border border-b-0 border-gray-200">
-            <p class="mb-2 text-gray-500 text-sm">The accordion typically consists of a series of sections or panels, where each panel contains a header (often a clickable element) and a content area. When a header is clicked, its corresponding content area expands or collapses, revealing or hiding the content within. This is often achieved using CSS for styling and animations, along with JavaScript for handling the interactive behavior.</p>
-            <p class="text-gray-500 text-sm">Learn more here <a href="https://www.w3schools.com/howto/howto_js_accordion.asp" class="text-blue-600 hover:underline">get started</a> and start testing it out!</p>
+            <p class="mb-2 text-gray-500 text-sm"><strong>1. Limited Screen Space:</strong> Accordions are great for conserving screen space when you have a lot of content to present but want to avoid overwhelming users with a long list.</p>
+            <p class="mb-2 text-gray-500 text-sm"><strong>2. Progressive Disclosure:</strong> When you want to progressively reveal additional information based on user interest or interaction, accordions can help keep the initial view clean and focused.
+            </p>
+            <p class="mb-2 text-gray-500 text-sm"><strong>3. Grouped Content:</strong> If you have content that can be logically grouped together, such as frequently asked questions, different sections of a form, or settings/options, accordions can help organize and categorize them.
+            </p>
+            <p class="mb-2 text-gray-500 text-sm"><strong>Hierarchical Information:</strong> When you have a hierarchical structure, like categories and subcategories, accordions can present the hierarchy in a structured manner.
+            </p>
           </div>
         </div>
-        <!-- Accordion 1 -->
-        <div id="accordion-color" data-accordion="collapse" data-active-classes="bg-blue-100 text-blue-600">
-          <h2 id="accordion-color-heading-1">
-            <button type="button" class="flex items-center justify-start gap-2 w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200" data-accordion-target="#accordion-color-body-1" aria-expanded="true" aria-controls="accordion-color-body-1">
-              <i class="ri-add-circle-line"></i>
-              <span>What if the user clicks on a collapsed card while another card is open?</span>
-            </button>
-          </h2>
-          <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
-            <div class="p-5 border border-b-0 border-gray-200">
-              <p class="mb-2 text-gray-500 text-sm">The accordion typically consists of a series of sections or panels, where each panel contains a header (often a clickable element) and a content area. When a header is clicked, its corresponding content area expands or collapses, revealing or hiding the content within. This is often achieved using CSS for styling and animations, along with JavaScript for handling the interactive behavior.</p>
-              <p class="text-gray-500 text-sm">Learn more here <a href="https://www.w3schools.com/howto/howto_js_accordion.asp" class="text-blue-600 hover:underline">get started</a> and start testing it out!</p>
-            </div>
+      </li>
+      <!-- Accordion 3 -->
+      <li class="group" id="accordion-color-3">
+        <h2>
+          <button type="button" class="flex items-center justify-start gap-2 w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200" data-accordion-target="#accordion-color-body-3" aria-expanded="false">
+            <i class="ri-add-circle-line"></i>
+            <span>When and how should accordions be used?</span>
+          </button>
+        </h2>
+        <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
+          <div class="p-5 border border-b-0 border-gray-200">
+            <p class="mb-2 text-gray-500 text-sm">One approach is to automatically close the currently open card when a new card is clicked, ensuring that only one card is open at a time. Alternatively, you can allow users to independently toggle cards, keeping already opened cards open. Giving users the option to manually close an open card and using smooth transitions are essential for a pleasant experience. Visual cues such as icons or arrows can help users understand the open and closed states of the cards.</p>
+            <p class="mb-2 text-gray-500 text-sm">Additionally, consider scrolling the page to bring the opened card into view, especially if the card's content is extensive. The chosen behavior should align with the user's needs and the content presented, always aiming to enhance usability and engagement.
+            </p>
           </div>
-          <!-- Accordion 1 -->
-          <div id="accordion-color" data-accordion="collapse" data-active-classes="bg-blue-100 text-blue-600">
-            <h2 id="accordion-color-heading-1">
-              <button type="button" class="flex items-center justify-start gap-2 w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200" data-accordion-target="#accordion-color-body-1" aria-expanded="true" aria-controls="accordion-color-body-1">
-                <i class="ri-add-circle-line"></i>
-                <span>Icon Choices</span>
-              </button>
-            </h2>
-            <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
-              <div class="p-5 border border-b-0 border-gray-200">
-                <p class="mb-2 text-gray-500 text-sm">The accordion typically consists of a series of sections or panels, where each panel contains a header (often a clickable element) and a content area. When a header is clicked, its corresponding content area expands or collapses, revealing or hiding the content within. This is often achieved using CSS for styling and animations, along with JavaScript for handling the interactive behavior.</p>
-                <p class="text-gray-500 text-sm">Learn more here <a href="https://www.w3schools.com/howto/howto_js_accordion.asp" class="text-blue-600 hover:underline">get started</a> and start testing it out!</p>
-              </div>
-            </div>
-          </div>
-          <!--end of accordion section-->
-
         </div>
-      </div>
+      </li>
+      <!-- Accordion 3 -->
+      <li class="group" id="accordion-color-4">
+        <h2>
+          <button type="button" class="flex items-center justify-start gap-2 w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200" data-accordion-target="#accordion-color-body-4" aria-expanded="false">
+            <i class="ri-add-circle-line"></i>
+            <span>When and how should accordions be used?</span>
+          </button>
+        </h2>
+        <div id="accordion-color-body-4" class="hidden" aria-labelledby="accordion-color-heading-4">
+          <div class="p-5 border border-b-0 border-gray-200">
+            <p class="mb-2 text-gray-500 text-sm">One approach is to automatically close the currently open card when a new card is clicked, ensuring that only one card is open at a time. Alternatively, you can allow users to independently toggle cards, keeping already opened cards open. Giving users the option to manually close an open card and using smooth transitions are essential for a pleasant experience. Visual cues such as icons or arrows can help users understand the open and closed states of the cards.</p>
+            <p class="mb-2 text-gray-500 text-sm">Additionally, consider scrolling the page to bring the opened card into view, especially if the card's content is extensive. The chosen behavior should align with the user's needs and the content presented, always aiming to enhance usability and engagement.
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <!--End-->
+  </div>
 
 </body>
 
