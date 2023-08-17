@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Card2</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+
+  <script src="main.js" defer></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+</head>
+
+<body class="relative min-h-screen flex justify-center items-center" style="font-family: 'Manrope', sans-serif;">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="https://images.unsplash.com/photo-1514477917009-389c76a86b68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGluayUyMHNraWVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" alt="Background Image" class="w-full h-full object-cover blur">
+  </div>
+  <!-- Card -->
+  <div class="w-2/5 absolute bg-white shadow-xl p-6 rounded-3xl">
+    <!--Exit-->
+    <div class="w-full flex justify-end">
+      <i class="ri-close-line bg-rose-50 mt-2 mr-2 px-2 py-1 rounded-full text-sm cursor-pointer hover:scale-110 transition-all"></i>
+    </div>
+    <!-- Header -->
+    <div class="grid grid-cols-2 gap-2">
+      <!--image-->
+      <div>
+        <div class="flex justify-center">
+          <img src="https://static01.nyt.com/images/2018/07/24/arts/24bookmurata-cover/24bookmurata-cover-superJumbo.jpg" class="object-scale-down h-60 w-100"></img>
+        </div>
+        <div class="text-center mt-4 mb-4">
+          <i class="ri-star-fill text-light-blue-500 hover:text-teal-500 transition-all p-2"></i>
+          <i class="ri-star-fill text-light-blue-500 hover:text-teal-500 transition-all p-2"></i>
+          <i class="ri-star-fill text-light-blue-500 hover:text-teal-500 transition-all p-2"></i>
+          <i class="ri-star-fill text-light-blue-500 hover:text-teal-500 transition-all p-2"></i>
+          <i class="ri-star-fill text-light-blue-500 hover:text-teal-500 transition-all p-2"></i>
+        </div>
+      </div>
+      <!--title and author-->
+      <div>
+        <h3 class="text-left font-semibold text-xl px-2">Convenience Store Woman</h3>
+        <p class="text-left font-normal text-lg px-2 my-4">Author: Suyaki Murata</p>
+        <p class="text-left font-light text-md px-2 my-4">"Convenience Store Woman" explores themes of societal conformity, individuality, and the struggle to find one's place in the world. It also touches on the tension between personal desires and societal expectations, inviting readers to reflect on the complexities of identity and the different paths people take to navigate their lives.
+        </p>
+      </div>
+    </div>
+    <!-- Table -->
+    <div class="relative overflow-x-auto ">
+      <table class="w-full text-sm text-left text-gray-500">
+        <thead class="text-xs">
+          <tr>
+            <th scope="col" class="px-6 py-3">
+            </th>
+            <th scope="col" class="px-6 py-3">
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-white border-b">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-right">
+              Originally Published </th>
+            <td class="px-6 py-4 text-left">
+              2016
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-right">
+              Author </th>
+            <td class="px-6 py-4 text-left">
+              Sayaka Murata </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-right">
+              Page Count </th>
+            <td class="px-6 py-4 text-left">
+              163
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-right">
+              Translations </th>
+            <td class="px-6 py-4 flex-wrap text-left">
+              Published in Japanese, translated to 30+ languages </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--end of table-->
+
+  </div>
+  </div>
+
+</html>
