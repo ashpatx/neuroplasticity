@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Bar 2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gradient-to-br from-green-300 to-purple-400 font-primary min-h-screen flex justify-center items-center" style="font-family:'Manrope', sans-serif">
+  <!-- Gradient Border Container -->
+  <div class="w-2/5 absolute flex justify-center items-center">
+    <!-- White Container -->
+    <div class="w-full bg-gray-100/80 relative shadow-lg shadow-gray-400/40 rounded-xl gap-2">
+      <!--Banner + Menu -->
+      <div class="w-full flex bg-purple-400 rounded-t-xl rounded-b-none rounded-3xl p-2">
+        <i class="ri-arrow-left-s-line text-white w-full flex justify-start items-center px-2 py-2 text-md text-2xl cursor-pointer hover:scale-110 transition-all"></i>
+        <h3 class="font-semibold text-white text-xl w-full flex justify-center items-center">My Cart</h3>
+        <i class="ri-menu-line text-white w-full flex justify-end items-center px-2 py-2 rounded-full text-2xl cursor-pointer hover:scale-110 transition-all"></i>
+      </div>
+
+      <!--Cart Section-->
+      <div class="flex flex-col justify-start p-2 mt-4">
+        <!--Item 1-->
+        <div class="flex gap-2 p-2 bg-white rounded-lg mt-2">
+          <img class="flex-shrink-0 w-15 h-20" src="https://images.unsplash.com/photo-1617997455403-41f333d44d5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Ben Jerry Photo">
+          <div class="flex flex-col">
+            <h5 class="font-semibold text-md">Apple iPhone SE 16GB Blue</h5>
+            <!--Options-->
+            <div class="mt-2 flex justify-between items-center">
+              <!--Quantity-->
+              <input type="number" class="peer block min-h-[auto] w-1/4 rounded border border-gray-300 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary" id="exampleFormControlInputNumber" min="1" value="1" />
+
+              <!--End of Quantity-->
+              <i class="ri-pencil-line"></i>
+              <i class="ri-close-line"></i>
+              <p class="font-light text-md">$429.95</p>
+            </div>
+            <!--end Options-->
+          </div>
+          <!--End Item 1-->
+        </div>
+        <!--Item 2-->
+        <div class="flex gap-2 p-2 bg-white rounded-lg mt-2">
+          <img class="flex-shrink-0 w-15 h-20" src="https://images.unsplash.com/photo-1622551013998-0de58c1f4541?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODN8fGlwaG9uZSUyMGNhc2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Ben Jerry Photo">
+          <div class="flex flex-col">
+            <h5 class="font-semibold text-md">iPhone SE Case</h5>
+            <!--Options-->
+            <div class="mt-2 flex justify-between items-center">
+              <!--Quantity-->
+              <input type="number" class="peer block min-h-[auto] w-1/4 rounded border border-gray-300 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary" id="exampleFormControlInputNumber" min="1" value="1" />
+
+              <!--End of Quantity-->
+              <i class="ri-pencil-line"></i>
+              <i class="ri-close-line"></i>
+              <p class="font-light text-md">$7.95</p>
+            </div>
+            <!--end Options-->
+          </div>
+        </div>
+        <!--End Item 2-->
+        <!--Item 3-->
+        <div class="flex gap-2 p-2 bg-white rounded-lg mt-2">
+          <img class="flex-shrink-0 w-15 h-20" src="https://images.unsplash.com/photo-1593789198788-8b21805d5fdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aXBob25lJTIwc2NyZWVuJTIwcHJvdGVjdG9yfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Ben Jerry Photo">
+          <div class="flex flex-col">
+            <h5 class="font-semibold text-md">iPhone SE Screen Protector</h5>
+            <!--Options-->
+            <div class="mt-2 flex justify-between items-center">
+              <!--Quantity-->
+              <input type="number" class="peer block min-h-[auto] w-1/4 rounded border border-gray-300 bg-transparent px-2 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary" id="exampleFormControlInputNumber" min="1" value="1" />
+
+              <!--End of Quantity-->
+              <i class="ri-pencil-line"></i>
+              <i class="ri-close-line"></i>
+              <p class="font-light text-md">$4.95</p>
+            </div>
+            <!--end Options-->
+          </div>
+          <!--End Item 3-->
+        </div>
+        <!--end of Shopping Cart Section-->
+        <div class="mt-4 flex justify-end items-center space-x-2">
+          <p class="font-light text-xs uppercase">Subtotal</p>
+          <p class="font-medium text-sm">$442.85</p>
+        </div>
+        <!-- SHAPE -->
+        <div class="mt-10 relative -mb-2 w-full h-[50px]">
+          <!-- Circle Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-b from-purple-300 to-purple-400 rounded-t-full"></div>
+          <!-- Flat Bottom Line -->
+          <div class="absolute bottom-0 left-0 w-full h-1 bg-purple-400"></div>
+          <!-- Text -->
+          <div class="absolute inset-0 flex items-center justify-center text-white font-bold">Checkout Now</div>
+        </div>
+        <!-- END OF SHAPE -->
+
+      </div>
+</body>
+
+</html>
