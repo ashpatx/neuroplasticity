@@ -1,0 +1,120 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .visible {
+      display: flex;
+      text-align: center;
+      margin-top: 0.25rem;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-800 font-primary min-h-screen flex justify-center items-center" style="font-family:'Manrope', sans-serif">
+  <!-- Gradient Border Container -->
+  <div class="w-1/4 absolute">
+    <!-- White Container -->
+    <div class="w-full bg-gradient-to-t from-green-200 to-blue-500 relative shadow-lg shadow-gray-400/40 rounded-xl gap-2">
+      <!-- Header Menu -->
+      <div class="w-full flex flex-col justify-center items-center bg-blue-500 rounded-t-xl rounded-b-none rounded-3xl p-2">
+        <p class="text-white text-sm cursor-pointer hover:text-black transition-all">Wednesday</p>
+        <p class="text-white text-xs cursor-pointer hover:text-black transition-all">May 04, 2020 7:30pm</p>
+      </div>
+      <!--Circle-->
+      <div class="bg-green-50 flex flex-col justify-center items-center p-2">
+        <div class="w-24 h-24 rounded-full relative flex items-center justify-center text-xl font-bold">
+          <div class="w-24 h-24 relative flex flex-col items-center justify-center text-xl font-bold">
+            <div class="absolute w-full h-full rounded-full border-4 border-blue-500 bg-white flex flex-col items-center justify-center">
+              <span class="text-black text-md font-medium">4.8</span>
+              <span class="font-light text-black text-xs">KM</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="w-full flex items-center justify-center gap-2 mt-2">
+          <div class="flex flex-col justify-center items-center">
+            <p class="text-xs uppercase font-light">Time</p>
+            <p class="text-md">23:40</p>
+          </div>
+          <div class="flex flex-col justify-center items-center">
+            <p class="text-xs uppercase font-light">Streak</p>
+            <p class="text-md">5</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activities Grid -->
+      <h3 class="text-center text-md font-medium p-2">Recent Activity</h3>
+
+      <div class="grid grid-cols-1 gap-4 p-2">
+        <!-- Activity Square 1 -->
+        <div class="flex justify-center items-center">
+          <i class="font-normal ri-run-fill mr-2"></i>
+          <p class="font-light text-sm sm:hidden">5km</p>
+          <p class="font-light text-sm sm:hidden">1h 10min</p>
+          <p class="font-normal text-sm">230 calories</p>
+          <!-- Plus button to toggle visibility -->
+          <button class="text-black font-normal p-1 rounded ml-2" onclick="toggleVisibility('content-1', this)">+</button>
+        </div>
+        <!-- Hidden by default -->
+        <div id="content-1" class="hidden col-span-1 p-2">
+          <p class="font-light text-sm">Distance: 5km</p>
+          <p class="font-light text-sm">Duration: 1h 10min</p>
+          <p class="font-light text-sm">Heart Rate: 170bpm</p>
+        </div>
+
+        <!-- Activity Square 2 -->
+        <div class="flex justify-center items-center">
+          <i class="font-normal ri-run-fill mr-2"></i>
+          <p class="font-light text-sm sm:hidden">8km</p>
+          <p class="font-light text-sm sm:hidden">1h 20min</p>
+          <p class="font-normal text-sm">200 calories</p>
+          <!-- Plus button to toggle visibility -->
+          <button class="text-black font-normal p-1 rounded ml-2" onclick="toggleVisibility('content-2', this)">+</button>
+        </div>
+        <!-- Hidden by default -->
+        <div id="content-2" class="hidden col-span-1 p-2">
+          <p class="font-light text-sm">Distance: 8km</p>
+          <p class="font-light text-sm">Duration: 1h 20min</p>
+          <p class="font-light text-sm">Heart Rate: 165bpm</p>
+        </div>
+
+        <!-- Activity Square 3 -->
+        <div class="flex justify-center items-center">
+          <i class="font-normal ri-riding-line mr-2"></i>
+          <p class="font-light text-sm sm:hidden">11km</p>
+          <p class="font-light text-sm sm:hidden">1h 5min</p>
+          <p class="font-normal text-sm">300 calories</p>
+          <!-- Plus button to toggle visibility -->
+          <button class="text-black font-normal p-1 rounded ml-2" onclick="toggleVisibility('content-3', this)">+</button>
+        </div>
+        <!-- Hidden by default -->
+        <div id="content-3" class="hidden col-span-1 p-2">
+          <p class="font-light text-sm">Distance: 11km</p>
+          <p class="font-light text-sm">Duration: 1h 5min</p>
+          <p class="font-light text-sm">Heart Rate: 173bpm</p>
+        </div>
+      </div>
+      <!-- Footer Menu -->
+      <div class="rounded-b-xl w-full flex justify-between items-center bg-green-50 p-2">
+        <i class="ri-home-heart-fill text-blue-500 text-xl cursor-pointer hover:scale-110 transition-all"></i>
+        <button class="uppercase bg-gradient-to-r from-blue-300 to-blue-500 font-semibold text-white px-3 py-1 rounded-xl font-semibold">Go</button>
+        <i class="ri-menu-line text-blue-500 text-xl cursor-pointer hover:scale-110 transition-all"></i>
+      </div>
+    </div>
+  </div>
+
+  <script src="toggle.js"></script>
+
+</body>
+
+</html>
