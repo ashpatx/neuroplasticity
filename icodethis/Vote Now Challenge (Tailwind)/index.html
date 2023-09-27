@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vote Now Challenge</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body class="bg-orange-50 font-primary min-h-screen overflow-hidden" style="font-family:'Manrope', sans-serif">
+
+  <!-- Home Music App Challenge Screen -->
+  <div class="flex justify-center items-center min-h-screen">
+    <!-- Vote Now Card -->
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col justify-center items-center bg-gray-50 border-solid border-2 rounded-lg border-teal-200 p-2" id="vote-card">
+      <div>
+        <div class="flex justify-center items-center p-2">
+          <img class="flex-shrink-0 w-12 h-12 rounded-full" src="https://images.unsplash.com/photo-1605033375841-e6be8a34917c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Multicolor Gradient Blue to Red">
+        </div>
+      </div>
+      <h2 class="text-center text-lg font-semibold text-gray-900">Music App Challenge</h2>
+      <p class="text-center text-sm font-normal text-gray-900">Vote for your favorite community uploads online</p>
+      <button class="m-2 bg-rose-400 max-w-sm cursor-pointer rounded-md border border-neutral-700 px-2 py-1 transition-all duration-200 hover:bg-rose-300 hover:border-neutral-400" id="vote-now">
+        <a href=" #">
+          <p class="text-sm text-gray-900 font-medium">Vote Now</p>
+        </a>
+      </button>
+    </div>
+
+    <!-- Challenges Card (Card 2: Hidden) -->
+    <div class="w-full sm:w-1/3 md:w-1/4 lg:w-1/4 xl:w-1/5 flex flex-col justify-center items-center bg-gray-50 p-2" id="challenges-card" style="display: none;">
+      <!-- Home Button (on Card 2: Hidden) -->
+      <button class="m-2 bg-rose-400 max-w-sm cursor-pointer rounded-md border border-neutral-700 px-2 py-1 transition-all duration-200 hover:bg-rose-300 hover:border-neutral-400" id="home-button" style="display: none;">
+        <a href="#">
+          <p class="text-sm text-gray-900 font-medium">Home</p>
+        </a>
+      </button>
+      <div class="m-2 flex justify-between items-center">
+        <h2 class="text-sm font-semibold text-gray-900">Ongoing Challenges</h2>
+        <button class="p-2 text-xs font-normal text-gray-900 transition-all duration-200 hover:text-rose-500">View All</button>
+      </div>
+      <!-- List of Challenges (Card 2: Hidden) -->
+      <!-- Challenge 1 -->
+      <div class="m-2 flex flex-col bg-gray-200 rounded-md border border-neutral-700 px-2 py-1 h-auto">
+        <div class="flex justify-between items-center">
+          <p class="text-sm">Spotify Challenge</p>
+
+          <div class="confetti-container">
+            <canvas class="confetti" style="display: none;"></canvas>
+            <button class="text-xs bg-teal-200 max-w-xs cursor-pointer rounded-md border border-blue-200 px-2 transition-all duration-300 hover:bg-blue-100 hover:border-blue-100" id="select-vote-1">Vote</button>
+          </div>
+        </div>
+        <p class="text-xs">36 Submissions</p>
+      </div>
+      <!-- Challenge 2 -->
+      <div class="m-2 flex flex-col bg-gray-200 rounded-md border border-neutral-700 px-2 py-1 h-auto">
+        <div class="flex justify-between items-center">
+          <p class="text-sm">iHeart Challenge</p>
+
+          <div class="confetti-container">
+            <canvas class="confetti" style="display: none;"></canvas>
+            <button class="text-xs bg-teal-200 max-w-xs cursor-pointer rounded-md border border-blue-200 px-2 transition-all duration-300 hover:bg-blue-100 hover:border-blue-100" id="select-vote-2">Vote</button>
+          </div>
+        </div>
+        <p class="text-xs">48 Submissions</p>
+      </div>
+      <!-- Challenge 3 -->
+      <div class="m-2 flex flex-col bg-gray-200 rounded-md border border-neutral-700 px-2 py-1 h-auto">
+        <div class="flex justify-between items-center">
+          <p class="text-sm">TikTok Challenge</p>
+
+          <div class="confetti-container">
+            <canvas class="confetti" style="display: none;"></canvas>
+            <button class="text-xs bg-teal-200 max-w-xs cursor-pointer rounded-md border border-blue-200 px-2 transition-all duration-300 hover:bg-blue-100 hover:border-blue-100" id="select-vote-3">Vote</button>
+          </div>
+        </div>
+        <p class="text-xs">104 Submissions</p>
+      </div>
+      <!-- Challenge 4 -->
+      <div class="m-2 flex flex-col bg-gray-200 rounded-md border border-neutral-700 px-2 py-1 h-auto">
+        <div class="flex justify-between items-center">
+          <p class="text-sm">YouTube Challenge</p>
+
+          <div class="confetti-container">
+            <canvas class="confetti" style="display: none;"></canvas>
+            <button class="text-xs bg-teal-200 max-w-xs cursor-pointer rounded-md border border-blue-200 px-2 transition-all duration-300 hover:bg-blue-100 hover:border-blue-100" id="select-vote-1">Vote</button>
+          </div>
+        </div>
+        <p class="text-xs">70 Submissions</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>
