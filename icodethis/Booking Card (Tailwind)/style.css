@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+
+:root {
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: rgb(132, 204, 22);
+  background-image: radial-gradient(
+      at 79% 72%,
+      rgb(99, 102, 241) 0,
+      transparent 85%
+    ),
+    radial-gradient(at 1% 15%, rgb(209, 213, 219) 0, transparent 79%),
+    radial-gradient(at 6% 35%, rgb(6, 78, 59) 0, transparent 48%),
+    radial-gradient(at 10% 73%, rgb(76, 29, 149) 0, transparent 63%),
+    radial-gradient(at 83% 78%, rgb(199, 210, 254) 0, transparent 69%);
+}
