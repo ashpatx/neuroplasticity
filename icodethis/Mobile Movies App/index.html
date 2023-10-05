@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Movies App v2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="min-h-screen flex justify-center items-center bg-indigo-200/40 shadow-sm font-primary" style="font-family:'Manrope', sans-serif">
+  <!--Container-->
+  <div class="w-1/3 h-[500px] bg-indigo-50 shadow-[0px_0px_300px_#A5B4FC] rounded-lg snap-x overflow-y-auto relative overflow-hidden">
+    <!--Banner Header -->
+    <header class="flex bg-indigo-500 p-2 flex items-center gap-10">
+      <button><i class="ri-arrow-left-s-line text-gray-100 text-lg cursor-pointer hover:scale-110 transition-all"></i></button>
+      <h3 class="font-medium text-gray-100 text-md ml-14">90s Movies</h3>
+    </header>
+    <!--Search Bar Component-->
+    <section class="mt-2 mb-2 rounded-lg bg-white relative w-full">
+      <i class="absolute ml-2 top-1/2 -translate-y-1/2 text-indigo-500 ri-search-line text-sm"></i>
+      <input id="searchbar" type="search" placeholder="Search Movies" class="w-full bg-white p-2 pl-6 outline-none placeholder:font-medium placeholder:text-gray-400 rounded-lg shadow-lg text-sm" spellcheck="false" />
+      <i class="absolute right-2 top-1/2 -translate-y-1/2 text-indigo-500 ri-arrow-down-s-line text-lg"></i>
+    </section>
+    <!--Genre 1-->
+    <section class="movie-grid w-full">
+      <section class="movie-genre">
+        <!--Genre Title-->
+        <div class="genre-intro flex justify-between items-center mx-2">
+          <p class="uppercase font-light text-indigo-600 text-sm">Comedy</p>
+          <p class="text-xs text-indigo-600">See all <i class="ri-arrow-right-s-fill"></i></p>
+        </div>
+        <!--Genre List-->
+        <div class="genre-titles m-2 flex gap-2">
+          <!--genre 1 movie 1-->
+          <div id="title" class="title-single cursor-pointer w-2/5">
+            <div class="title-single-img overflow-hidden">
+              <img class="rounded-t-lg w-full object-cover h-30 w-20" src="https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW92aWUlMjBwb3N0ZXJzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60" alt="movie title" />
+            </div>
+            <div class="bg-indigo-400 title-single-stats flex justify-between items-center py-2 px-1 gap-1 rounded-b-lg">
+              <p class="font-light text-gray-100 text-sm">Clueless</p>
+              <p class="font-light bg-gray-100 p-1 rounded-lg text-indigo-600 text-xs"><i class="ri-star-s-fill"></i> 9.1</p>
+            </div>
+          </div>
+          <!--genre 1 movie 2-->
+          <div id="title" class="title-single cursor-pointer w-2/5">
+            <div class="title-single-img overflow-hidden">
+              <img class="rounded-t-lg w-full object-cover h-30 w-20" src="https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW92aWUlMjBwb3N0ZXJzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60" alt="movie title" />
+            </div>
+            <div class="bg-indigo-400 title-single-stats flex justify-between items-center py-2 px-1 gap-1 rounded-b-lg">
+              <p class="font-light text-gray-100 text-sm">Alfalfa</p>
+              <p class="font-light bg-gray-100 p-1 rounded-lg text-indigo-600 text-xs"><i class="ri-star-s-fill"></i> 9.1</p>
+            </div>
+          </div>
+          <!--genre 1 movie 3-->
+          <div id="title" class="title-single cursor-pointer w-2/5">
+            <div class="title-single-img overflow-hidden">
+              <img class="rounded-t-lg w-full object-cover h-30 w-20" src="https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW92aWUlMjBwb3N0ZXJzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60" alt="movie title" />
+            </div>
+            <div class="bg-indigo-400 title-single-stats flex justify-between items-center py-2 px-1 gap-1 rounded-b-lg">
+              <p class="font-light text-gray-100 text-sm">Alfalfa</p>
+              <p class="font-light bg-gray-100 p-1 rounded-lg text-indigo-600 text-xs"><i class="ri-star-s-fill"></i> 9.1</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Genre List 2-->
+      <section class="mt-4 movie-genre">
+        <!--Genre Title-->
+        <div class="genre-intro flex justify-between items-center mx-2">
+          <p class="uppercase font-light text-indigo-600 text-sm">Comedy</p>
+          <p class="text-xs text-indigo-600">See all <i class="ri-arrow-right-s-fill"></i></p>
+        </div>
+        <div class="genre-titles m-2 flex gap-2">
+          <!--genre 2 movie 1-->
+          <div id="title" class="title-single cursor-pointer w-2/5">
+            <div class="title-single-img overflow-hidden">
+              <img class="rounded-t-lg w-full object-cover h-30 w-20" src="https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW92aWUlMjBwb3N0ZXJzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60" alt="movie title" />
+            </div>
+            <div class="bg-indigo-400 title-single-stats flex justify-between items-center py-2 px-1 gap-1 rounded-b-lg">
+              <p class="font-light text-gray-100 text-sm">Alfalfa</p>
+              <p class="font-light bg-gray-100 p-1 rounded-lg text-indigo-600 text-xs"><i class="ri-star-s-fill"></i> 9.1</p>
+            </div>
+          </div>
+          <!--genre 2 movie 2-->
+          <div id="title" class="title-single cursor-pointer w-2/5">
+            <div class="title-single-img overflow-hidden">
+              <img class="rounded-t-lg w-full object-cover h-30 w-20" src="https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW92aWUlMjBwb3N0ZXJzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60" alt="movie title" />
+            </div>
+            <div class="bg-indigo-400 title-single-stats flex justify-between items-center py-2 px-1 gap-1 rounded-b-lg">
+              <p class="font-light text-gray-100 text-sm">Alfalfa</p>
+              <p class="font-light bg-gray-100 p-1 rounded-lg text-indigo-600 text-xs"><i class="ri-star-s-fill"></i> 9.1</p>
+            </div>
+          </div>
+          <!--genre 2 movie 3-->
+          <div id="title" class="title-single cursor-pointer w-2/5">
+            <div class="title-single-img overflow-hidden">
+              <img class="rounded-t-lg w-full object-cover h-30 w-20" src="https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW92aWUlMjBwb3N0ZXJzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60" alt="movie title" />
+            </div>
+            <div class="bg-indigo-400 title-single-stats flex justify-between items-center py-2 px-1 gap-1 rounded-b-lg">
+              <p class="font-light text-gray-100 text-sm">Alfalfa</p>
+              <p class="font-light bg-gray-100 p-1 rounded-lg text-indigo-600 text-xs"><i class="ri-star-s-fill"></i> 9.1</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Genre List 3-->
+      <section class="mt-4 movie-genre">
+        <!--Genre Title-->
+        <div class="genre-intro flex justify-between items-center mx-2">
+          <p class="uppercase font-light text-indigo-600 text-sm">Comedy</p>
+          <p class="text-xs text-indigo-600">See all <i class="ri-arrow-right-s-fill"></i></p>
+        </div>
+        <div class="genre-titles m-2 flex gap-2">
+          <!--genre 3 movie 1-->
+          <div id="title" class="title-single cursor-pointer w-2/5">
+            <div class="title-single-img overflow-hidden">
+              <img class="rounded-t-lg w-full object-cover h-30 w-20" src="https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW92aWUlMjBwb3N0ZXJzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60" alt="movie title" />
+            </div>
+            <div class="bg-indigo-400 title-single-stats flex justify-between items-center py-2 px-1 gap-1 rounded-b-lg">
+              <p class="font-light text-gray-100 text-sm">Alfalfa</p>
+              <p class="font-light bg-gray-100 p-1 rounded-lg text-indigo-600 text-xs"><i class="ri-star-s-fill"></i> 9.1</p>
+            </div>
+          </div>
+          <!--genre 3 movie 2-->
+          <div id="title" class="title-single cursor-pointer w-2/5">
+            <div class="title-single-img overflow-hidden">
+              <img class="rounded-t-lg w-full object-cover h-30 w-20" src="https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW92aWUlMjBwb3N0ZXJzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60" alt="movie title" />
+            </div>
+            <div class="bg-indigo-400 title-single-stats flex justify-between items-center py-2 px-1 gap-1 rounded-b-lg">
+              <p class="font-light text-gray-100 text-sm">Alfalfa</p>
+              <p class="font-light bg-gray-100 p-1 rounded-lg text-indigo-600 text-xs"><i class="ri-star-s-fill"></i> 9.1</p>
+            </div>
+          </div>
+          <!--genre 3 movie 3-->
+          <div id="title" class="title-single cursor-pointer w-2/5">
+            <div class="title-single-img overflow-hidden">
+              <img class="rounded-t-lg w-full object-cover h-30 w-20" src="https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW92aWUlMjBwb3N0ZXJzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60" alt="movie title" />
+            </div>
+            <div class="bg-indigo-400 title-single-stats flex justify-between items-center py-2 px-1 gap-1 rounded-b-lg">
+              <p class="font-light text-gray-100 text-sm">Alfalfa</p>
+              <p class="font-light bg-gray-100 p-1 rounded-lg text-indigo-600 text-xs"><i class="ri-star-s-fill"></i> 9.1</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  </div>
+</body>
+
+</html>
