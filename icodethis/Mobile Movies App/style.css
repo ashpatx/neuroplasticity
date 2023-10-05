@@ -1,0 +1,18 @@
+:root {
+  font-family: "Manrope", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #818cf8;
+  border-radius: 4px;
+}
