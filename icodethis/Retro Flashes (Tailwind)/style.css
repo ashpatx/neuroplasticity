@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(19, 78, 74);
+    background-image: radial-gradient(at 70% 5%,
+            rgb(31, 41, 55) 0,
+            transparent 71%),
+        radial-gradient(at 70% 27%, rgb(250, 204, 21) 0, transparent 0%),
+        radial-gradient(at 92% 13%, rgb(101, 163, 13) 0, transparent 62%),
+        radial-gradient(at 63% 5%, rgb(244, 63, 94) 0, transparent 65%),
+        radial-gradient(at 28% 100%, rgb(71, 85, 105) 0, transparent 68%);
+}
+
+.custom-msg {
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 calc(100% - 0px));
+  padding: 2em 2em 4em;
+}
