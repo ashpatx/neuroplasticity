@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Flash</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="flex justify-center items-center min-h-screen" style="font-family:'Manrope', sans-serif">
+  <!--Success Message-->
+  <section class="mx-4 bg-white md:w-1/3 sm:w-2/3 rounded-lg shadow-lg overflow-hidden relative flex flex-col justify-center items-center">
+    <div class="rounded-t-lg custom-msg w-full flex justify-center items-center bg-gradient-to-tr from-teal-500 via-green-400 to-green-500 text-white">
+      <i class="ri-wifi-line text-4xl"></i>
+    </div>
+    <div class="rounded-b-lg p-2 gap-2 w-full flex flex-col justify-center items-center bg-white text-gray-800">
+      <p class="text-lg font-semibold">Success!</p>
+      <p class="text-md font-normal">Connection works perfectly.</p>
+      <button class="mt-2 text-md uppercase font-semibold text-blue-800">Ok</button>
+    </div>
+  </section>
+  <!--Error Message-->
+  <section class="mx-4 bg-white sm:w-2/3 md:w-1/3 rounded-lg shadow-lg overflow-hidden relative flex flex-col justify-center items-center">
+    <div class="rounded-t-lg w-full custom-msg flex justify-center items-center bg-gradient-to-tr from-red-400 via-red-500 to-rose-400 text-white">
+      <i class="ri-wifi-off-line text-4xl"></i>
+    </div>
+    <div class="p-2 rounded-b-lg gap-2 w-full flex flex-col justify-center items-center bg-white text-gray-800">
+      <p class="text-lg font-semibold">Error!</p>
+      <p class="text-md font-normal">Connection could not be established.</p>
+      <button class="mt-2 text-md uppercase font-semibold text-blue-800">Retry</button>
+    </div>
+  </section>
+</body>
+
+</html>
