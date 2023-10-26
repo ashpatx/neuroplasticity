@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Dropdown</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="main.js"></script>
+
+</head>
+
+<body class="min-h-screen flex justify-center items-center bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0 font-primary overflow-hidden" style="font-family:'Manrope', sans-serif">
+  <!-- Menu -->
+  <div class="w-1/6 h-screen">
+    <div class="flex justify-end gap-4">
+      <!-- Notification Button -->
+      <button id="notification-button"><i class="ri-notification-line text-xl"></i></button>
+      <!-- Profile Dropdown Button -->
+      <button id="profile-button" class="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-slate-900 text-slate-100 ring-slate-100 border-2 border-slate-600 transition hover:shadow-md hover:ring-2">
+        <img class="w-full object-cover" src="https://images.unsplash.com/photo-1515190962763-c7cd8b16b25c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=400&q=60" alt="Profile Picture" />
+      </button>
+    </div>
+
+    <!-- Profile Dropdown Menu -->
+    <div id="profile-menu" class="relative inline-block mt-3 flex flex-col min-w-max max-w-md rounded-xl bg-slate-900/70 p-4 text-slate-100 shadow-lg">
+      <div class="flex items-center gap-2">
+        <div class="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border-2 border-slate-600">
+          <img src="https://images.unsplash.com/photo-1515190962763-c7cd8b16b25c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=400&q=60" class="w-12 h-12 rounded-full object-cover" alt="Profile" />
+        </div>
+        <div class="gap-2">
+          <p class="flex gap-1 text-sm font-semibold px-1">Tom Jerry</p>
+          <p class="text-xs text-slate-300 px-1">tomjerry@me.com</p>
+          <button class="mt-1 flex justify-center rounded-lg bg-orange-500 px-2 py-1 text-xs font-semibold hover:bg-orange-500 focus:ring-2 focus:ring-orange-400">
+            Account Settings
+          </button>
+        </div>
+      </div>
+      <!--Divider-->
+      <div class="mt-4 mb-2 border-t border-slate-500/30"></div>
+      <!--Other Accounts-->
+      <div class="flex flex-col">
+        <a href="#" class="flex items-center gap-3 rounded-md px-2 py-2 hover:bg-slate-800">
+          <div class="flex h-10 w-10 items-center justify-center overflow-hidden bg-teal-500 rounded-full border-2 border-slate-600">
+            <p class="text-white">TJ</p>
+          </div>
+          <div class="flex flex-col text-white">
+            <p class="text-sm">Tom Jerry</p>
+            <p class="text-xs">tj@support.com</p>
+          </div>
+        </a>
+        <a href="#" class="flex items-center gap-3 rounded-md px-2 py-2 hover:bg-slate-800">
+          <div class="flex h-10 w-10 items-center justify-center overflow-hidden bg-orange-500 rounded-full border-2 border-slate-600">
+            <p class="text-white">TJ</p>
+          </div>
+          <div class="flex flex-col text-white">
+            <p class="text-sm">Tom Jerry</p>
+            <p class="text-xs">tj@support.com</p>
+          </div>
+        </a>
+        <a href="#" class="flex items-center gap-3 rounded-md px-2 py-2 hover:bg-slate-800">
+          <div class="flex h-10 w-10 items-center justify-center overflow-hidden bg-amber-500 rounded-full border-2 border-slate-600">
+            <p class="text-white">TJ</p>
+          </div>
+          <div class="flex flex-col text-white">
+            <p class="text-sm">Tom Jerry</p>
+            <p class="text-xs">tj@support.com</p>
+          </div>
+        </a>
+      </div>
+      <div class="flex justify-between items-center mt-2 mb-1 p-2">
+        <button class="flex justify-center gap-3 rounded-full border border-dashed px-3 py-2 font-semibold hover:bg-orange-500 focus:ring-2 focus:ring-orange-400">
+          <i class="ri-add-line text-sm"></i>
+          <span class="absolute left-2 bottom-2 bg-black text-white text-sm p-2 rounded-md opacity-0 transition-opacity duration-300 hover:opacity-100">Add Account</p></button>
+        <button class="flex justify-center items-center gap-3 rounded-lg px-3 py-2 hover:bg-orange-500 focus:ring-2 focus:ring-orange-500">
+          <i class="ri-logout-box-r-line text-sm"></i>
+          <p class="font-normal text-sm">Sign Out</p>
+        </button>
+      </div>
+    </div>
+    <!-- Notification Menu -->
+    <div id="notification-menu" class="relative inline-block mt-3 flex flex-col min-w-max max-w-md rounded-xl bg-slate-900/70 p-4 text-slate-100 shadow-lg">
+      <div class="flex items-center gap-3 px-2">
+        <div class="flex h-10 w-10 items-center justify-center overflow-hidden bg-orange-500 rounded-full border-2 border-slate-600">
+          <p class="text-white text-md">3</p>
+        </div>
+        <p class="text-md font-semibold">Unread Messages</p>
+      </div>
+      <!--Divider-->
+      <div class="mt-2 mb-1 border-t border-slate-500/30"></div>
+      <!--Other Accounts-->
+      <div class="flex flex-col">
+        <a href="#" class="flex items-center gap-3 rounded-md px-2 py-2 hover:bg-slate-800">
+          <i class="ri-group-2-line text-3xl text-teal-400 flex h-10 w-10 items-center justify-center overflow-hidden"></i>
+          <div class="flex flex-col text-white">
+            <p class="text-sm font-semibold">Confirm Team Plan</p>
+            <p class="text-xs font-normal w-60">Confirm team seats for upcoming year, billed annually.</p>
+          </div>
+        </a>
+        <a href="#" class="flex items-center gap-3 rounded-md px-2 py-2 hover:bg-slate-800">
+          <i class="ri-rotate-lock-line text-3xl text-orange-400 flex h-10 w-10 items-center justify-center overflow-hidden"></i>
+          <div class="flex flex-col text-white">
+            <p class="text-sm font-semibold">Privacy Policy</p>
+            <p class="text-xs font-normal w-60">Check updated privacy policy on Support Account.</p>
+          </div>
+        </a>
+        <a href="#" class="flex items-center gap-3 rounded-md px-2 py-2 hover:bg-slate-800">
+          <i class="ri-error-warning-line text-3xl text-red-400 flex h-10 w-10 items-center justify-center overflow-hidden"></i>
+          <div class="flex flex-col text-white">
+            <p class="text-sm font-semibold">Gmail Password</p>
+            <p class="text-xs font-normal w-60">Warning: Please update your password in Gmail.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
