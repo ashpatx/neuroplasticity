@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings Modal</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="main.js"></script>
+
+</head>
+
+<body class="min-h-screen flex flex-col justify-center items-center font-primary  bg-[url('https://looneypatterns.com/images/pattern-preview/14.png')] bg-cover bg-no-repeat h-full w-full bg-gray-100 rounded-md" style="font-family:'Manrope', sans-serif">
+  <!-- Profile Dropdown Menu -->
+  <div id="settingsCard" class="max-w-md flex flex-col rounded-xl bg-slate-900/90 text-slate-100 shadow-lg">
+    <div class="flex justify-end items-center my-2 mx-4">
+      <button id="buttonClose" class="relative"><i class="ri-close-circle-line text-pink-300 cursor-pointer text-2xl"></i>
+        <span id="closeButtonText" class="absolute bg-white -left-2 top-2 text-pink-500 text-sm px-2 py-1 opacity-0 rounded-md hover:opacity-90 transition-opacity duration-300 z-10">Cancel</span></button>
+    </div>
+    <div class="flex flex-col justify-start items-start gap-2 px-8">
+      <p id="settings" class="text-xl font-semibold text-pink-300">Settings</p>
+      <p id="languageTitle" class="text-md font-semibold text-pink-300">Language</p>
+      <p id="languageText" class="text-sm w-11/12">Let us know which language you're most comfortable using. You can change it back at any time.</p>
+      <select name="language" id="lang" class="rounded-lg bg-pink-700 text-white px-4 py-2 text-sm font-light">
+        <option value="English">🇬🇧 English</option>
+        <option value="Spanish">🇪🇸 Spanish</option>
+        <option value="Hindi">🇮🇳 Hindi</option>
+        <option value="French">🇫🇷 French</option>
+      </select>
+    </div>
+    <!--Divider-->
+    <div class="mx-8 mt-4 mb-4 border-t border-slate-300/50"></div>
+    <!--Autoplay and Profile Photo-->
+    <div class="flex items-center px-8 mb-2">
+      <div class="flex flex-col w-3/4">
+        <p id="autoplayTitle" class="text-md font-semibold text-pink-300">Autoplay Videos</p>
+        <p id="autoplayText" class="text-sm w-3/4">Choose if you want to autoplay on your browser
+        </p>
+      </div>
+
+      <!-- Rounded Toggle -->
+      <div class="flex justify-end items-center">
+        <label class="relative inline-flex items-center mr-5 cursor-pointer">
+          <input type="checkbox" value="" class="sr-only peer" checked>
+          <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-pink-400 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-pink-600"></div>
+        </label>
+      </div>
+    </div>
+    <div class="flex items-center px-8 py-4 mb-2">
+      <div class="flex flex-col w-3/4">
+        <p id="photosTitle" class="text-md font-semibold text-pink-300">Show Profile Photos</p>
+        <p id="photosText" class="text-sm w-3/4">Choose whether to show or hide profile photos of other members.</p>
+      </div>
+      <!-- Rounded Toggle -->
+      <div class="flex justify-end items-center">
+        <label class="relative inline-flex items-center mr-5 cursor-pointer">
+          <input type="checkbox" value="" class="sr-only peer" checked>
+          <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-pink-400 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-pink-600"></div>
+        </label>
+      </div>
+    </div>
+    <div class="flex items-center gap-4 px-8 mb-8">
+      <button id="saveButton" class="saveButtonText mt-1 flex justify-center rounded-lg bg-pink-700 text-white px-4 py-2 text-sm font-light hover:bg-pink-600 focus:ring-2 focus:ring-pink-400">
+        Save
+      </button>
+      <button id="cancelButton" class="cancelButtonText mt-1 flex justify-center rounded-lg bg-gray-200 text-black px-4 py-2 text-sm font-light hover:bg-pink-600 hover:text-white focus:ring-2 focus:ring-pink-400">
+        Cancel
+      </button>
+    </div>
+  </div>
+  <footer class="mt-4 rounded-xl shadow-2xl bg-white px-4 py-2 border border-pink-200">
+    <div class="flex flex-col items-center">
+      <p class="text-xs text-black font-normal">Background Image by<a href="https://looneypatterns.com/" class="text-pink-800"> Looney Patterns</p></a>
+      <p class="text-xs text-black font-normal">Challenge from<a href="https://icodethis.com/" class="text-pink-800"> icodethis</p></a>
+    </div>
+  </footer>
+</body>
+
+</html>
