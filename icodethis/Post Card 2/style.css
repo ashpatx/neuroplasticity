@@ -1,0 +1,57 @@
+body {
+  background: white;
+}
+
+@keyframes openAnimation {
+  0% {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+  }
+  100% {
+    width: 406px;
+    height: 480px;
+    border-radius: 0;
+  }
+}
+
+.circle-container {
+  overflow: hidden;
+  width: 406px;
+  height: 480px;
+  border-radius: 0;
+}
+
+.circle-animation {
+  animation: openAnimation 3s ease-in-out forwards;
+}
+
+.background-lines {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw-erase 5s linear forwards infinite;
+}
+
+@keyframes draw-erase {
+  0%,
+  100% {
+    stroke-dashoffset: 1000;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.popup {
+  display: none;
+  position: relative;
+  text-align: center;
+}
+
+.popup textarea {
+  font-size: 16px;
+}
+
+.popup button {
+  font-size: 18px;
+}
