@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tesiomonials</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <script src="main.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Manrope&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="flex flex-col justify-content items-center">
+    <h2 class="title text-4xl font-semibold">Plans and Pricing</h2>
+    <p class="title mt-1 text-2xl font-medium">Upgrade or cancel at any time.</p>
+    <!--Pricing Cards Container-->
+    <div id="cards" class="mt-8 title flex justify-content items-center gap-4">
+      <!--Price 1-->
+      <div class="border bg-[#fcffeb] p-8 min-w-xs flex flex-col rounded-xl shadow-xl">
+        <div class="flex flex-col justify-center items-center">
+          <p class="title text-xl font-semibold text-black">Free</p>
+          <p class="title text-lg font-medium text-black">Perfect for Hobbyists</p>
+          <!--Pros-->
+          <div class="subtitle mt-4 mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+            <p class="font-normal">Perfect for Hobbyists</p>
+          </div>
+          <div class="subtitle mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+            <p class="font-normal">Sure</p>
+          </div>
+
+          <div class="mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+            <p class="subtitle font-normal">Yeah</p>
+          </div>
+          <div class="subtitle mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+            <p class="font-normal">Okay</p>
+          </div>
+
+          <button class="mt-4 flex justify-center rounded-xl border shadow-xl px-4 py-2 text-sm text-black font-light">
+            Get Started
+          </button>
+
+        </div>
+      </div>
+      <!--Price 2-->
+      <div class="border bg-[#fcffeb] p-8 min-w-xs flex flex-col rounded-xl shadow-xl">
+        <div class="flex flex-col justify-center items-center">
+          <p class="title text-xl font-semibold text-black">Pro</p>
+          <p class="title text-lg font-medium text-black">Perfect for Hobbyists</p>
+          <!--Pros-->
+          <div class="subtitle mt-4 mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+            <p class="font-normal">Perfect for Hobbyists</p>
+          </div>
+          <div class="subtitle mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+            <p class="font-normal">Sure</p>
+          </div>
+
+          <div class="mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+            <p class="subtitle font-normal">Yeah</p>
+          </div>
+          <div class="subtitle mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+            <p class="font-normal">Okay</p>
+          </div>
+
+          <button class="mt-4 flex justify-center rounded-xl border shadow-xl px-4 py-2 text-sm text-black font-light">
+            Get Started
+          </button>
+
+        </div>
+      </div>
+      <!--Price 3-->
+      <div class="border bg-[#fcffeb] p-8 min-w-xs flex flex-col rounded-xl shadow-xl">
+        <div class="flex flex-col justify-center items-center">
+          <p class="title text-xl font-semibold text-black">Enterprise</p>
+          <p class="title text-md font-medium text-black">Perfect for Hobbyists</p>
+          <!--Pros-->
+          <div class="subtitle mt-4 mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+            <p class="font-normal">Perfect for Hobbyists</p>
+          </div>
+          <div class="subtitle mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+            <p class="font-normal">Sure</p>
+          </div>
+
+          <div class="mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+            <p class="subtitle font-normal">Yeah</p>
+          </div>
+          <div class="subtitle mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+            <p class="font-normal">Okay</p>
+          </div>
+
+          <button class="mt-4 flex justify-center rounded-xl border shadow-xl px-4 py-2 text-sm text-black font-light">
+            Get Started
+          </button>
+
+        </div>
+      </div>
+    </div>
+    <!-- SVG Layer -->
+    <svg>
+      <filter id='noiseFilter'>
+        <feTurbulence type='fractalNoise' baseFrequency='1.9' stitchTiles='stitch' />
+        <feColorMatrix in="colorNoise" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+        <feComposite operator="in" in2="SourceGraphic" result="monoNoise" />
+        <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+      </filter>
+    </svg>
+
+</body>
+
+</html>
