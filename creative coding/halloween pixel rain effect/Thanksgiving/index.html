@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanksgiving Countdown</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body
+    class="min-h-screen m-0 relative flex flex-col justify-center items-center overflow-hidden"
+    style="font-family: 'Manrope', sans-serif"
+  >
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      id="video-background"
+      class="fixed top-0 left-0 w-full h-full object-cover -z-1"
+    >
+      <source src="video/thanksCountdown.mp4" type="video/mp4" />
+    </video>
+    <!-- Countdown Container -->
+
+    <h1 class="text-white font-semibold text-4xl z-10">
+      Thanksgiving Countdown
+    </h1>
+
+    <div
+      id="countdown"
+      class="z-10 text-white countdown flex justify-center items-center gap-4 xs:flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row"
+    >
+      <!--Days-->
+      <div class="time m-2">
+        <h2 id="days" class="font-medium text-xl">00</h2>
+        <p class="font-normal text-xl">Days</p>
+      </div>
+
+      <!--Hours-->
+      <div class="time m-2">
+        <h2 id="hours" class="font-medium text-xl">00</h2>
+        <p class="font-normal text-xl">Hours</p>
+      </div>
+
+      <!--Minutes-->
+      <div class="time m-2">
+        <h2 id="minutes" class="font-medium text-xl">00</h2>
+        <p class="font-normal text-xl">Minutes</p>
+      </div>
+
+      <!--Seconds-->
+      <div class="time m-2">
+        <h2 id="seconds" class="font-medium text-xl">00</h2>
+        <p class="font-normal text-xl">Seconds</p>
+      </div>
+    </div>
+    <script src="countdown.js"></script>
+  </body>
+</html>
