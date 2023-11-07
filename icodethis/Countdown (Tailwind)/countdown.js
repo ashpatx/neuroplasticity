@@ -1,7 +1,7 @@
-const daysElement = document.getElementById("days");
-const hoursElement = document.getElementById("hours");
-const minutesElement = document.getElementById("minutes");
-const secondsElement = document.getElementById("seconds");
+const days = document.getElementById("days");
+const hours = document.getElementById("hours");
+const minutes = document.getElementById("minutes");
+const seconds = document.getElementById("seconds");
 
 function updateCountdownTime() {
   const currentTime = new Date();
@@ -11,15 +11,15 @@ function updateCountdownTime() {
   );
   const diff = thanksgivingTime - currentTime;
 
-  const days = Math.floor(diff / 1000 / 60 / 60 / 24);
-  const hours = Math.floor((diff / 1000 / 60 / 60) % 24);
-  const minutes = Math.floor((diff / 1000 / 60) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
+  const d = Math.floor(diff / 1000 / 60 / 60 / 24);
+  const h = Math.floor((diff / 1000 / 60 / 60) % 24);
+  const m = Math.floor((diff / 1000 / 60) % 60);
+  const s = Math.floor((diff / 1000) % 60);
 
-  daysElement.textContent = days;
-  hoursElement.textContent = hours < 10 ? "0" + hours : hours;
-  minutesElement.textContent = minutes < 10 ? "0" + minutes : minutes;
-  secondsElement.textContent = seconds < 10 ? "0" + seconds : seconds;
+  days.textContent = d;
+  hours.textContent = h < 10 ? "0" + h : h;
+  minutes.textContent = m < 10 ? "0" + m : m;
+  seconds.textContent = s < 10 ? "0" + s : s;
 }
 
 setInterval(updateCountdownTime, 1000);
