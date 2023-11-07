@@ -1,52 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+const daysElement = document.getElementById("days");
+const hoursElement = document.getElementById("hours");
+const minutesElement = document.getElementById("minutes");
+const secondsElement = document.getElementById("seconds");
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thanksgiving Countdown</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+function updateCountdownTime() {
+  const currentTime = new Date();
+  const currentYear = currentTime.getFullYear();
+  const thanksgivingTime = new Date(
+    `November 24, ${currentYear} 2023 00:00:00`
+  );
+  const diff = thanksgivingTime - currentTime;
 
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="countdown.js"></script>
+  const days = Math.floor(diff / 1000 / 60 / 60 / 24);
+  const hours = Math.floor((diff / 1000 / 60 / 60) % 24);
+  const minutes = Math.floor((diff / 1000 / 60) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
 
-</head>
+  daysElement.textContent = days;
+  hoursElement.textContent = hours < 10 ? "0" + hours : hours;
+  minutesElement.textContent = minutes < 10 ? "0" + minutes : minutes;
+  secondsElement.textContent = seconds < 10 ? "0" + seconds : seconds;
+}
 
-<body class="min-h-screen flex flex-col justify-center items-center bg-[url('https://images.unsplash.com/photo-1538883689728-2c32af36a313?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-bottom	bg-no-repeat h-auto w-full font-primary overflow-hidden" style="font-family:'Manrope', sans-serif">
-  <!-- Countdown Container -->
-
-  <h1 class="font-semibold text-4xl">Thanksgiving Countdown</h1>
-
-  <div id="countdown" class="countdown flex justify-center items-center gap-4 xs:flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row">
-    <!--Days-->
-    <div class="time m-2">
-      <h2 id="days" class="font-medium text-xl">00</h2>
-      <p class="font-normal text-xl">Days</p>
-    </div>
-
-    <!--Hours-->
-    <div class="time m-2">
-      <h2 id="hours" class="font-medium text-xl">00</h2>
-      <p class="font-normal text-xl">Hours</p>
-    </div>
-
-    <!--Minutes-->
-    <div class="time m-2">
-      <h2 id="minutes" class="font-medium text-xl">00</h2>
-      <p class="font-normal text-xl">Minutes</p>
-    </div>
-
-    <!--Seconds-->
-    <div class="time m-2">
-      <h2 id="seconds" class="font-medium text-xl">00</h2>
-      <p class="font-normal text-xl">Seconds</p>
-    </div>
-
-  </div>
-
-</body>
-
-</html>
+setInterval(updateCountdownTime, 1000);
+updateCountdownTime();
