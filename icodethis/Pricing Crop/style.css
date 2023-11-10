@@ -5,9 +5,8 @@
 }
 
 body {
-  display: grid;
-  place-items: center;
   min-height: 100vh;
+  background-color: #ffa599;
   background-color: #ffa599;
   background-image: radial-gradient(
       at 67% 83%,
@@ -32,7 +31,7 @@ body::after {
   content: "";
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -100;
   opacity: 40%;
 }
 
@@ -48,4 +47,31 @@ body::before {
 .subtitle {
   font-family: "Manrope", serif;
   color: black;
+}
+
+/*Infinite Watermark*/
+#infiniteWatermark {
+  max-width: 15rem;
+  position: absolute;
+  top: -80px;
+  right: -90px;
+  z-index: -2;
+}
+.text {
+  fill: black;
+  background-color: #fcffeb;
+  font-family: "EB Garamond", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-variant-ligatures: none;
+  letter-spacing: 6px;
+  animation: rotate 27s linear infinite;
+  transform-origin: 250px 250px;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
 }
