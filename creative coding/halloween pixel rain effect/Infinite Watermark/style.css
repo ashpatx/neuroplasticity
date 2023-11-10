@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: #ffa599;
+  background-image: radial-gradient(
+      at 67% 83%,
+      hsla(152, 97%, 62%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 94% 49%, hsla(18, 71%, 62%, 1) 0px, transparent 50%),
+    radial-gradient(at 30% 1%, hsla(229, 71%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 17% 50%, hsla(346, 79%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 51% 9%, hsla(184, 74%, 69%, 1) 0px, transparent 50%),
+    radial-gradient(at 3% 92%, hsla(92, 78%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 5% 52%, hsla(247, 65%, 62%, 1) 0px, transparent 50%);
+  line-height: 1.4;
+}
+
+/* SVG Backdrop */
+body::before,
+body::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 40%;
+}
+
+body::before {
+  background: #8c8c8c;
+  filter: url(#noiseFilter);
+}
+
+.text {
+  fill: black;
+  font-family: "EB Garamond", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-variant-ligatures: none;
+  letter-spacing: 6px;
+  animation: rotate 25s linear infinite;
+  transform-origin: 250px 250px;
+}
+
+#infiniteWatermark {
+  max-width: 80vmin;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
