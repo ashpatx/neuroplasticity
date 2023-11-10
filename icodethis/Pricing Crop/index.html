@@ -8,7 +8,7 @@
   <title>Tesiomonials</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
@@ -19,91 +19,91 @@
 
 </head>
 
-<body>
+<body class="flex justify-center items-center">
   <div class="flex flex-col justify-content items-center">
     <h2 class="title text-4xl font-semibold">Plans and Pricing</h2>
     <p class="title mt-1 text-2xl font-medium">Upgrade or cancel at any time.</p>
     <!--Pricing Cards Container-->
-    <div id="cards" class="mt-8 title flex justify-content items-center gap-4">
+    <div id="cards" class="mt-20 title flex justify-content items-center gap-4">
       <!--Price 1-->
-      <div class="border bg-[#fcffeb] p-8 min-w-xs flex flex-col rounded-xl shadow-xl">
+      <div class="border bg-[#fcffeb] p-8 min-w-xs max-w-md flex flex-col rounded-xl shadow-xl">
         <div class="flex flex-col justify-center items-center">
-          <p class="title text-xl font-semibold text-black">Free</p>
+          <p class="title text-2xl font-semibold text-black">Free</p>
           <p class="title text-lg font-medium text-black">Perfect for Hobbyists</p>
-          <!--Pros-->
-          <div class="subtitle mt-4 mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
-            <p class="font-normal">Perfect for Hobbyists</p>
-          </div>
-          <div class="subtitle mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
-            <p class="font-normal">Sure</p>
-          </div>
-
-          <div class="mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
-            <p class="subtitle font-normal">Yeah</p>
-          </div>
-          <div class="subtitle mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
-            <p class="font-normal">Okay</p>
-          </div>
-
-          <button class="mt-4 flex justify-center rounded-xl border shadow-xl px-4 py-2 text-sm text-black font-light">
-            Get Started
-          </button>
-
         </div>
+        <!--Pros-->
+        <div class="mt-2 left-0 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+          <p class="subtitle font-normal">Essential features</p>
+        </div>
+        <div class="subtitle left-0  mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+          <p class="font-normal">Community Access</p>
+        </div>
+        <div class="subtitle left-0  mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+          <p class="font-normal">Zero-cost entry</p>
+        </div>
+        <button class="mt-4 flex justify-center rounded-xl border shadow-xl px-4 py-2 text-sm text-black font-light">
+          Get Started
+        </button>
       </div>
       <!--Price 2-->
-      <div class="border bg-[#fcffeb] p-8 min-w-xs flex flex-col rounded-xl shadow-xl">
+      <div class="border bg-[#fcffeb] p-8 min-w-xs max-w-md flex flex-col rounded-xl shadow-xl">
         <div class="flex flex-col justify-center items-center">
-          <p class="title text-xl font-semibold text-black">Pro</p>
-          <p class="title text-lg font-medium text-black">Perfect for Hobbyists</p>
-          <!--Pros-->
-          <div class="subtitle mt-4 mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
-            <p class="font-normal">Perfect for Hobbyists</p>
-          </div>
-          <div class="subtitle mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
-            <p class="font-normal">Sure</p>
-          </div>
-
-          <div class="mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
-            <p class="subtitle font-normal">Yeah</p>
-          </div>
-          <div class="subtitle mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
-            <p class="font-normal">Okay</p>
-          </div>
-
-          <button class="mt-4 flex justify-center rounded-xl border shadow-xl px-4 py-2 text-sm text-black font-light">
-            Get Started
-          </button>
-
+          <p class="title text-2xl font-semibold text-black">Pro</p>
+          <p class="title text-lg font-medium text-black">Professional Scaling</p>
         </div>
+        <!--Pros-->
+        <div class="mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+          <p class="subtitle font-normal">Enhanced Features</p>
+        </div>
+        <div class="subtitle mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+          <p class="font-normal">Advanced Analytics</p>
+        </div>
+        <div class="subtitle mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+          <p class="font-normal">Priority Support</p>
+        </div>
+        <button class="mt-4 flex justify-center rounded-xl border shadow-xl px-4 py-2 text-sm text-black font-light">
+          Get Started
+        </button>
       </div>
-      <!--Price 3-->
-      <div class="border bg-[#fcffeb] p-8 min-w-xs flex flex-col rounded-xl shadow-xl">
-        <div class="flex flex-col justify-center items-center">
-          <p class="title text-xl font-semibold text-black">Enterprise</p>
-          <p class="title text-md font-medium text-black">Perfect for Hobbyists</p>
+      <!--Price 3 Container-->
+      <div class="border bg-[#fcffeb] min-w-xs max-w-md h-auto flex flex-col rounded-xl shadow-xl relative">
+        <!--Infinite Watermark-->
+        <svg id="infiniteWatermark" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="textCircle" d="M250, 400, a150, 150 0 0,1 0, -300a150,150 0 0, 1 0, 300Z" transform="rotate(12, 250, 250)" />
+          </defs>
+          <g class="textCircle">
+            <text textlength="940" class="text">
+              <textPath xlink:href="#textCircle" aria-label="20% off Annual Plans" textlength="940">
+                20% off Per Seat ▫️ 20% off Per Seat ▫️&#160;
+              </textPath>
+            </text>
+          </g>
+        </svg>
+        <!--Pricing 3-->
+        <div class="p-8 flex flex-col">
+          <div class="flex flex-col justify-center items-center">
+            <p class="title text-2xl font-semibold text-black">Enterprise</p>
+            <p class="title text-md font-medium text-black">Team Collaboration</p>
+          </div>
           <!--Pros-->
-          <div class="subtitle mt-4 mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
-            <p class="font-normal">Perfect for Hobbyists</p>
+          <div class="subtitle mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
+            <p class="font-normal">Custom Integrations</p>
           </div>
           <div class="subtitle mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
-            <p class="font-normal">Sure</p>
+            <p class="font-normal">Dedicated Support</p>
           </div>
-
           <div class="mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
-            <p class="subtitle font-normal">Yeah</p>
-          </div>
-          <div class="subtitle mt-2 flex justify-start text-sm gap-2"><i class="ri-check-line"></i>
-            <p class="font-normal">Okay</p>
+            <p class="subtitle font-normal">Tailored Analytics</p>
           </div>
 
           <button class="mt-4 flex justify-center rounded-xl border shadow-xl px-4 py-2 text-sm text-black font-light">
             Get Started
           </button>
-
         </div>
       </div>
     </div>
+
     <!-- SVG Layer -->
     <svg>
       <filter id='noiseFilter'>
