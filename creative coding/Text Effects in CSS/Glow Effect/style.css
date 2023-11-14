@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
+}
+
+h2 {
+  font-family: "Liu Jian Mao Cao", sans-serif;
+  text-align: center;
+  font-weight: 200;
+  line-height: 1.4;
+  animation: glow 0.9s ease-in-out infinite alternate-reverse;
+}
+
+.text {
+  font-size: 4em;
+  color: #fff;
+  text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px #fff, 0 0 12px #a53,
+    0 0 18px #a53, 0 0 21px #a53, 0 0 24px #a53, 0 0 36px #a53;
+}
+
+@keyframes glow {
+  100% {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #a53,
+      0 0 6px #a53, 0 0 7px #a53, 0 0 8px #a53, 0 0 12px #a53;
+  }
+  0% {
+    text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #a53,
+      0 0 18px #a53, 0 0 20px #a53, 0 0 24px #a53, 0 0 25px #a53, 0 0 35px #a53;
+  }
+}
