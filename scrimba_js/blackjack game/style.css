@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-image: url("image/blackjack.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#message-el {
+  font-style: italic;
+}
+
+button {
+  width: 10em;
+  background: goldrod;
+  padding: 5px 0px;
+  font-weight: bold;
+}
