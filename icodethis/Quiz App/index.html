@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex flex-col justify-center items-center">
+
+  <!-- Quiz Card -->
+  <div class="w-1/4 flex flex-col justify-center items-center bg-violet-100/40 border rounded-xl shadow-xl border-violet-300 p-2" id="homeCard">
+    <div class="flex justify-center items-center p-2">
+      <img class="border-violet-400 flex-shrink-0 w-20 h-20 rounded-full" src="https://media4.giphy.com/media/l3nWrncF7S6w3htGU/giphy.gif?cid=ecf05e47tid9g9nxislvqaokz1smy7bclv9r9vkk5evyrme6&ep=v1_gifs_related&rid=giphy.gif&ct=g" alt="Open Mind">
+    </div>
+    <h2 class="text-center text-lg font-semibold text-gray-900">Weekend Trivia</h2>
+    <p class="text-center text-sm font-normal text-gray-900">Take a fun quiz</p>
+    <button class="m-2 bg-rose-400 max-w-sm cursor-pointer rounded-md border border-neutral-700 px-2 py-1 transition-all duration-200 hover:bg-rose-300 hover:border-neutral-400" id="startQuiz">
+      <a href="#">
+        <p class="text-sm text-gray-900 font-medium">Start Quiz</p>
+      </a>
+    </button>
+  </div>
+
+  <!--Quiz App-->
+  <div id="quizApp" class="hidden w-1/2 flex flex-col bg-stone-500/50 rounded-xl overflow-hidden shadow-lg">
+    <!-- Quiz Header-->
+    <div class="w-1/2 h-auto flex justify-between items-center">
+      <div class="flex gap-2">
+        <h2 class="font-normal text-lg text-gray-300">Correct</h2>
+        <h2 class="font-normal text-lg text-gray-300">Wrong</h2>
+      </div>
+      <div>
+        <h2 class="font-normal text-lg text-gray-300">Timer</h2>
+      </div>
+    </div>
+    <div id="quizBody" class="flex flex-col justify-center items-center">
+      <h2 id="quizQuestion" class="font-medium text-md">Quiz Question???</h2>
+      <ul class="answerOptions list-disc">
+        <li>Answer</li>
+        <li>Answer</li>
+        <li>Answer</li>
+        <li>Answer</li>
+      </ul>
+      <div id="answer">
+        <!--Answer dynamic-->
+      </div>
+      <div id="sequenceBtns">
+        <button class="m-2 bg-rose-400 max-w-sm cursor-pointer rounded-md border border-neutral-700 px-2 py-1 transition-all duration-200 hover:bg-rose-300 hover:border-neutral-400" id="startQuiz">
+          <a href="#">
+            <p class="text-sm text-gray-900 font-medium">Skip</p>
+          </a>
+        </button>
+        <button class="m-2 bg-rose-400 max-w-sm cursor-pointer rounded-md border border-neutral-700 px-2 py-1 transition-all duration-200 hover:bg-rose-300 hover:border-neutral-400" id="startQuiz">
+          <a href="#">
+            <p class="text-sm text-gray-900 font-medium">Submit</p>
+          </a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="mt-8 rounded-xl shadow-2xl bg-white px-4 py-2 border border-lime-300">
+    <div class="flex flex-col items-center">
+      <p class="text-xs text-black font-normal">Challenge from<a href="https://icodethis.com/" class="text-cyan-600"> icodethis</p></a>
+      <p class="text-xs text-black font-normal">Art by<a href="https://giphy.com/gifs/illustration-drawing-serge-bloch-l3nWrncF7S6w3htGU" class="text-cyan-600"> Serge Bloch</p></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
