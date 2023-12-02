@@ -1,0 +1,25 @@
+.overlayLuck {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.backgroundMedia {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+#countdown {
+  max-width: 560px;
+  text-align: center;
+  z-index: 1;
+}
