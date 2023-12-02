@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christmas Countdown</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body style="font-family: 'Cedarville Cursive', sans-serif">
+    <!-- Countdown Container -->
+    <section class="overlayLuck">
+      <video class="backgroundMedia" autoplay muted loop>
+        <source
+          src="image/snow_falling_gently_-motion_3__Image__1_Attachment_seed5149867643363931669.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+      <div
+        id="countdown"
+        class="mb-6 flex justify-center items-center gap-4 xs:flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row"
+      >
+        <!--Days-->
+        <div
+          class="time flex flex-col justify-center items-center bg-gray-300/40 w-[175px] h-[150px] rounded-lg shadow-md"
+        >
+          <h2 id="days" class="font-bold text-6xl">00</h2>
+          <p class="font-semibold text-4xl">Days</p>
+        </div>
+
+        <!--Hours-->
+        <div
+          class="time flex flex-col justify-center items-center bg-gray-300/40 w-[175px] h-[150px] rounded-lg shadow-md"
+        >
+          <h2 id="hours" class="font-bold text-6xl">00</h2>
+          <p class="font-semibold text-4xl">Hours</p>
+        </div>
+
+        <!--Minutes-->
+        <div
+          class="time flex flex-col justify-center items-center bg-gray-300/40 w-[175px] h-[150px] rounded-lg shadow-md"
+        >
+          <h2 id="minutes" class="font-bold text-6xl">00</h2>
+          <p class="font-semibold text-4xl">Minutes</p>
+        </div>
+
+        <!--Seconds-->
+        <div
+          class="time flex flex-col justify-center items-center bg-gray-300/40 w-[175px] h-[150px] rounded-lg shadow-md"
+        >
+          <h2 id="seconds" class="font-bold text-6xl">00</h2>
+          <p class="font-semibold text-4xl">Seconds</p>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
