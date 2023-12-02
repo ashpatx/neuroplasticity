@@ -1,0 +1,7 @@
+.overlay {
+  mix-blend-mode: lighten;
+}
+
+#video-background {
+  border: 2px solid transparent;
+}
