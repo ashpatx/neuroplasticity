@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christmas Countdown</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body
+    class="min-h-screen flex flex-col justify-center items-center w-full h-auto bg-[url('https://images.unsplash.com/photo-1678795014595-cf68b46b5621?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-bottom bg-no-repeat font-primary overflow-hidden"
+    style="font-family: 'Cedarville Cursive', sans-serif"
+  >
+    <!-- Countdown Container -->
+    <section class="absolute">
+      <div class="overlay">
+        <video
+          preload="none"
+          autoplay=""
+          loop=""
+          muted="muted"
+          playsinline=""
+          id="video-background"
+          class="relative"
+        >
+          <source
+            src="image/snow_falling_gently_-motion_3__Image__1_Attachment_seed5149867643363931669.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+      <div
+        id="countdown"
+        class="mb-6 flex justify-center items-center gap-4 xs:flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row text-[#314936]"
+      >
+        <!--Days-->
+        <div class="time m-4">
+          <h2 id="days" class="font-bold text-6xl">00</h2>
+          <p class="font-semibold text-4xl">Days</p>
+        </div>
+
+        <!--Hours-->
+        <div class="time m-4">
+          <h2 id="hours" class="font-bold text-6xl">00</h2>
+          <p class="font-semibold text-4xl">Hours</p>
+        </div>
+
+        <!--Minutes-->
+        <div class="time m-4">
+          <h2 id="minutes" class="font-bold text-6xl">00</h2>
+          <p class="font-semibold text-4xl">Minutes</p>
+        </div>
+
+        <!--Seconds-->
+        <div class="time m-4">
+          <h2 id="seconds" class="font-bold text-6xl">00</h2>
+          <p class="font-semibold text-4xl">Seconds</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
