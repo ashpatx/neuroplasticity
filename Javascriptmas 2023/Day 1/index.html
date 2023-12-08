@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas Countdown</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="countdown.js"></script>
+
+</head>
+
+<body class="min-h-screen flex flex-col justify-center items-center bg-[url('https://images.unsplash.com/photo-1543342578-b01e1755cc6b?q=80&w=1527&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-bottom	bg-no-repeat h-auto w-full font-primary overflow-hidden" style="font-family:'Cedarville Cursive', sans-serif">
+  <!--Title-->
+  <div id="title" class="flex justify-center items-center xs:flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row text-red-400">
+    <h1 class="text-5xl">Christmas Countdown</h1>
+  </div>
+
+  <!-- Countdown Container -->
+  <div id="countdown" class="mt-2 flex justify-center items-center  gap-4 xs:flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row text-emerald-50">
+    <!--Days-->
+    <div class="time m-4">
+      <h2 id="days" class="font-bold text-5xl">00</h2>
+      <p class="font-semibold text-4xl">Days</p>
+    </div>
+
+    <!--Hours-->
+    <div class="time m-4">
+      <h2 id="hours" class="font-bold text-5xl">00</h2>
+      <p class="font-semibold text-4xl">Hours</p>
+    </div>
+
+    <!--Minutes-->
+    <div class="time m-4">
+      <h2 id="minutes" class="font-bold text-5xl">00</h2>
+      <p class="font-semibold text-4xl">Minutes</p>
+    </div>
+
+    <!--Seconds-->
+    <div class="time m-4">
+      <h2 id="seconds" class="font-bold text-5xl">00</h2>
+      <p class="font-semibold text-4xl">Seconds</p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
