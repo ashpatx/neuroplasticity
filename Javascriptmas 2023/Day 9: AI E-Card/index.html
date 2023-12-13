@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>Christmas E-card</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@400&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="index.css">
+	</head>
+
+	<body>
+		<main>
+			
+			<dialog id="dialog-modal">
+				<form id="input-form">
+					<label>Describe a Christmassy image for your e-card 🎄</label>
+					<div class="form-inner">
+						<textarea placeholder="A winter scene..." id="user-input"></textarea>
+						<button type="submit"><img src="send.svg" class="btn-send"></button>
+					</div>
+				</form>
+			</dialog>
+			
+			<input type="checkbox" id="card-toggle" aria-label="Open the card">
+			<label class="card" for="card-toggle">
+  			<section class="card-face front-flap outside">
+				  <h1>Merry Christmas and</h1>
+  			</section>
+			
+			<section class="card-face front-flap inside" id="image-container">
+				<img src="/placeholder-image.png">
+			</section>
+			<section class="card-face back-flap inside">
+				<h1>Merry Christmas and</h1>
+				<h2>have a Happy New Year!</h2>
+				<p>Make it great!</p>
+			</section>
+			</label>
+			
+		</main>
+		<script src="index.js" type="module"></script>
+	</body>
+
+</html>
