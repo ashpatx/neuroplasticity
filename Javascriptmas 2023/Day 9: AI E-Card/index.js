@@ -1,14 +1,7 @@
-
+/** uncomment one of these **/
+// import OpenAI from "openai"
 // import { HfInference } from '@huggingface/inference'
-import { HfInference } from '@huggingface/inference'
 
-const dialogModal = document.getElementById('dialog-modal')
-const imageContainer = document.getElementById('image-container')
-const inputForm = document.getElementById('input-form');
-const userInput = document.getElementById('user-input');
-
-/** show dialog on load **/
-dialogModal.show()
 
 /**
  * 🎄 Challenge:
@@ -20,6 +13,13 @@ dialogModal.show()
  * 3. Render the image to imageContainer.
  * 
  **/   
+
+import { HfInference } from '@huggingface/inference'
+
+const dialogModal = document.getElementById('dialog-modal')
+const imageContainer = document.getElementById('image-container')
+const inputForm = document.getElementById('input-form');
+const userInput = document.getElementById('user-input');
 
 async function generateImage() {
     const inference = new HfInference(process.env.HUGGING_FACE_API_KEY);
@@ -46,7 +46,7 @@ function blobToDataURL(blob) {
 inputForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     dialogModal.close();
-    imageContainer.innerHTML = '<div class="spinner"></div>';
+    imageContainer.innerHTML = '<div class="loader"></div>';
     imageContainer.innerHTML = `<img src="${await generateImage()}" alt="${userInput.value}">`; 
     userInput.value = '';
 });
