@@ -1,0 +1,75 @@
+body {
+  background-image: url("santaWkshop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Manrope", sans-serif;
+}
+
+#factoryContainer {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+}
+
+.factory-line {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  margin-top: 5rem;
+  font-size: 22px;
+  color: rgba(37, 10, 10, 0.9);
+}
+
+.falling-box {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 650px;
+  height: 350px;
+  overflow: hidden;
+}
+
+.falling-emoji {
+  font-size: 30px;
+  margin: 10px;
+  background-color: rgba(255, 194, 193);
+  border-radius: 50%;
+  padding: 0.2rem 0.4rem;
+  display: inline-block;
+  animation: fallAnimation 2s linear;
+}
+
+@keyframes fallAnimation {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
+}
+
+#elvesCounter {
+  position: fixed;
+  margin-top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: rgba(37, 10, 10, 0.9);
+  font-weight: 600;
+}
+
+button {
+  background-color: rgba(255, 194, 193, 0.9);
+  color: black;
+  border-radius: 15px;
+}
