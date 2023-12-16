@@ -1,29 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Christmas Countdown</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="archer.js"></script>
-
-</head>
-
-<body>
-  <div class="archer">
-    <div class="outerCircle"></div>
-    <div class="innerCircle"></div>
-    <div class="centerCircle">
+  <body>
+    <div class="btnContainer">
+      <button class="attemptBtn">Attempt</button>
+      <button class="redoBtn"><i class="ri-restart-line"></i></button>
     </div>
-    <div class="bullseye">
+    <img src="cursor.png" class="cursor" />
+    <img src="present.png" class="present" />
+    <div class="archerContainer">
+      <div class="archer">
+        <div class="outerCircle"></div>
+        <div class="innerCircle"></div>
+        <div class="centerCircle"></div>
+        <div class="bullseye"></div>
+      </div>
     </div>
-  </div>
-  <button>Attempt</button>
-</body>
-
+    <script src="archer.js"></script>
+  </body>
 </html>
