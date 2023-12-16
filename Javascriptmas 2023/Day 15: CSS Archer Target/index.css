@@ -4,13 +4,39 @@
 }
 
 body {
-  display: grid;
-  place-content: center;
-  min-height: 100vh;
+  height: 100vh;
+  background-image: url("snowBg4.jpg");
+  background-size: cover;
+}
+
+/*button to start shooting*/
+.btnContainer {
+  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  border: 1px solid black;
+  font-size: 26px;
+  outline: none;
+  cursor: none;
+  margin: 0 1rem;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(188, 191, 201, 0.7);
+  color: black;
+  font-family: "Manrope", sans-serif;
 }
 
 .archer {
   border-radius: 50%;
+  position: absolute;
   display: grid;
   border: 0.5px solid var(--green);
   height: 250px;
@@ -22,6 +48,7 @@ body {
 .outerCircle {
   border-radius: 50%;
   background-image: url("https://images.unsplash.com/photo-1576072320516-24b83088e525?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hyaXN0bWFzJTIwd3JhcHBpbmclMjBwYXBlcnxlbnwwfHwwfHx8MA%3D%3D");
+  background-size: contain;
   grid-column: 1/11;
   grid-row: 1/11;
 }
@@ -54,19 +81,29 @@ body {
   grid-row: 4/8;
 }
 
-/*animated*/
-.archer.animate {
-  animation: moveArcher 1s ease-in-out;
+/*cursor*/
+.archerContainer {
+  position: relative;
+  height: 100%;
 }
 
-@keyframes moveArcher {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.cursor {
+  position: absolute;
+  height: 50px;
+  z-index: 2;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.3s transform ease;
+  transform-origin: 100% 100%;
+}
+
+.present {
+  height: 50px;
+  z-index: 2;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+img::selection {
+  background: transparent;
 }
