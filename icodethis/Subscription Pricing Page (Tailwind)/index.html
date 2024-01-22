@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Pricing Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex justify-center items-center font-primary overflow-hidden bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0" style="font-family:'Manrope', sans-serif">
+  <!--Container-->
+  <div class="w-1/4 h-1/2 flex flex-col bg-pink-100/50 rounded-lg overflow-hidden shadow-lg mx-auto">
+    <!--List-->
+    <section class="gap-2 p-4 flex flex-col justify-center items-center">
+      <!--Header-->
+      <div class="w-full flex flex-col justify-center items-center">
+        <h1 class="text-lg font-bold">Try FREE for 4 Weeks</h1>
+        <p class="text-md font-light px-8 text-center">We uncover the facts around the clock, all over the globe.</p>
+      </div>
+      <!-- Plan 1 -->
+      <div class="cursor-pointer w-11/12 border border-gray-500 px-2 py-1 rounded-lg flex justify-between items-center hover:bg-rose-200/50 hover:border hover:border-rose-300" onclick="toggleCheckbox(this)">
+        <!-- Left -->
+        <div class="flex items-center">
+          <button class="checkboxButton">
+            <i class="checkboxIcon ri-checkbox-blank-circle-line text-xl text-rose-600"></i>
+          </button>
+          <!-- Right -->
+          <div class="flex flex-col ml-2">
+            <h4 class="text-sm font-medium uppercase">Monthly</h4>
+            <h3 class="text-gray-900 font-light text-sm">4 weeks for free</h3>
+            <p class="text-gray-900 font-light text-xs">Then $3 every month for the first year</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan 2 -->
+      <div class="cursor-pointer w-11/12 border border-gray-500 px-2 py-1 rounded-lg flex justify-between items-center hover:bg-rose-200/50 hover:border hover:border-rose-300" onclick="toggleCheckbox(this)">
+        <!-- Left -->
+        <div class="flex items-center">
+          <button class="checkboxButton">
+            <i class="checkboxIcon ri-checkbox-blank-circle-line text-xl text-rose-600"></i>
+          </button>
+          <!-- Right -->
+          <div class="flex flex-col ml-2">
+            <h4 class="text-sm font-medium uppercase">Yearly</h4>
+            <h3 class="text-gray-900 font-light text-sm">4 weeks for free</h3>
+            <p class="text-gray-900 font-light text-xs">Then $30 for the first year</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Container -->
+      <div id="popupContainer" class="hidden fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex justify-center items-center">
+        <!-- Popup Content -->
+        <div class="w-1/3 bg-white p-8 rounded-lg shadow-lg flex flex-col justify-center items-center">
+          <iframe src="https://giphy.com/embed/3o7TKCSeiT7CDbvUGs" class="border-none w-full"></iframe>
+          <h2 class="text-xl font-bold">Confirmation</h2>
+          <p class="text-md font-normal px-10 text-center">Are you sure you're ACTUALLY going to use this?</p>
+          <!-- Buttons -->
+          <div class="flex gap-4">
+            <button id="continuePopup" class="mt-4 bg-rose-500 text-white px-4 py-2 rounded">Yep</button>
+            <button id="closePopup" class="mt-4 bg-rose-500 text-white px-4 py-2 rounded">Nah</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Continue Button -->
+      <button id="continue" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">Continue</button>
+
+      <a href="#" class="text-blue-500 underline hover:text-blue-700">View more offers</a>
+
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
