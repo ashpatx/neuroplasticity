@@ -1,0 +1,22 @@
+body {
+  background-color: rgb(6, 95, 70);
+  background-image: radial-gradient(
+      at 95% 61%,
+      rgb(29, 78, 216) 0,
+      transparent 100%
+    ),
+    radial-gradient(at 29% 69%, rgb(163, 163, 163) 0, transparent 100%),
+    radial-gradient(at 36% 28%, rgb(225, 29, 72) 0, transparent 100%);
+}
+
+/*continue button*/
+#popupContainer {
+  z-index: 99;
+}
+
+#popupContainer > div {
+  max-width: 600px;
+}
+#closePopup {
+  cursor: pointer;
+}
