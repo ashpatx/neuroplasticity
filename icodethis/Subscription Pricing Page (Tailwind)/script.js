@@ -10,11 +10,28 @@ function toggleCheckbox(clickedPlan) {
   });
 }
 
+/*confetti*/
+const jsConfetti = new JSConfetti();
+const canvases = document.querySelectorAll(".confetti");
+
 /*continue button*/
-document.getElementById("continue").addEventListener("click", function () {
-  document.getElementById("popupContainer").classList.remove("hidden");
+const continueBtn = document.getElementById("continueBtn");
+const popupContainer = document.getElementById("popupContainer");
+const yepBtn = document.getElementById("yepBtn");
+const nahBtn = document.getElementById("nahBtn");
+
+continueBtn.addEventListener("click", function () {
+  popupContainer.classList.remove("hidden");
 });
 
-document.getElementById("closePopup").addEventListener("click", function () {
-  document.getElementById("popupContainer").classList.add("hidden");
+yepBtn.addEventListener("click", function () {
+  jsConfetti.addConfetti({});
+  //post-confetti alert
+  alert("You've purchased!");
+  popupContainer.classList.add("hidden");
+});
+
+nahBtn.addEventListener("click", function () {
+  alert("smart decision, good for you!");
+  popupContainer.classList.add("hidden");
 });
