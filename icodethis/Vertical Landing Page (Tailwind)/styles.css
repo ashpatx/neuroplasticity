@@ -1,0 +1,16 @@
+body {
+  background-color: rgb(255, 250, 234);
+}
+
+nav {
+  font-family: "Manrope", sans-serif;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+section {
+  font-family: "Quattrocento", sans-serif;
+}
