@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex justify-center items-center font-primary overflow-hidden bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0">
+  <!--Container-->
+  <div class="w-4/5 h-7/8 flex bg-pink-300/30 rounded-lg overflow-hidden shadow-xl mx-auto">
+    <!-- Navigation -->
+    <nav class="bg-amber-300 flex flex-col">
+      <ul class="flex items-between gap-8 mx-4 my-4 px-2 py-2 vertical-text">
+        <li><a href="#" class="text-black text-sm hover:text-gray-100">Contact</a></li>
+        <li><a href="#" class="text-black text-sm hover:text-gray-100">Group Visits
+          </a></li>
+        <li><a href="#" class="text-black text-sm hover:text-gray-100">Exhibits</a></li>
+        <li><a href="#" class="text-black text-sm hover:text-gray-100">About</a></li>
+        <li><a href="#" class="text-black text-sm hover:text-gray-100">Home</a></li>
+      </ul>
+    </nav>
+    <!--Divider-->
+    <hr class="h-full">
+    </hr>
+    <!--Rest of Landing Page-->
+    <section class="p-4 flex flex-col">
+      <!--Part 1-->
+      <div class="flex justify-start items-center">
+        <!--Title-->
+        <div class="flex flex-col gap-6 p-4">
+          <h1 class="text-3xl font-semibold text-left">Indulge your senses</h1>
+          <p class="text-xl font-medium text-left">
+            Immerse yourself in the dynamic world of an watercolor, where stories and shapes come alive, inviting exploration and discovery.</p>
+          <button class="text-xl w-1/2 border border-yellow-600 rounded-lg font-light px-4 py-2 hover:bg-amber-300">View Exhibits</button>
+        </div>
+        <!--Pictures-->
+        <div class="flex">
+          <img class="rounded-xl object-cover" src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/334087/755023/main-image" alt="Art" />
+        </div>
+      </div>
+      <!--Part 2-->
+      <div class="flex justify-between">
+        <div class="flex flex-col p-4 w-1/2">
+          <p class="text-md font-medium text-left">"Each exhibit unveils a unique narrative, and a sense of awe envelops them, creating a cherished moment of artistic enchantment."</p>
+          <p class="text-sm font-bold text-left">-Wonder Society</p>
+        </div>
+        <div class="flex flex-col p-4 w-1/2">
+          <h2 class="font-bold text-lg ml-2">Open Hours</h2>
+          <div class="border border-yellow-600 rounded-lg font-light px-4 py-2 flex justify-between items-center gap-2 mt-2">
+            <div class="flex flex-col">
+              <h4 class="font-semibold text-sm">Monday-Thursday</h4>
+              <p>10am-6pm</p>
+            </div>
+            <div class="flex flex-col">
+              <h4 class="font-semibold text-sm">Friday-Saturday</h4>
+              <p>8am-8pm</p>
+            </div>
+            <div class="flex flex-col">
+              <h4 class="font-semibold text-sm">Sunday</h4>
+              <p>11am-2pm</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
