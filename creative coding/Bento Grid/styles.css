@@ -57,3 +57,81 @@
   grid-row-start: 1;
   grid-column-start: 5;
 }
+
+
+/* Responsive Bento Grid */
+@media (min-width: 768px) {
+  .example {
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .one {
+    grid-row: span 4 / span 4;
+  }
+  .two {
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+  }
+  .three {
+    grid-row: span 4 / span 4;
+  }
+  .four {
+    grid-column-start: 2;
+    grid-row-start: 4;
+  }
+  .five {
+    grid-row-start: 5;
+    grid-column-start: 1;
+  }
+  .six {
+    grid-row-start: 4;
+    grid-column-start: 3;
+  }
+  .seven {
+    grid-row-start: 1;
+    grid-column-start: 4;
+  }
+  .eight {
+    grid-row-start: 1;
+    grid-column-start: 5;
+  }
+}
+
+@media (min-width: 1024px) {
+  .example {
+    grid-template-rows: repeat(8, minmax(0, 1fr));
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .one {
+    grid-row: span 4 / span 4;
+  }
+  .two {
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+  }
+  .three {
+    grid-row: span 4 / span 4;
+    grid-row-start: 2;
+    grid-column-start: 5;
+  }
+  .four {
+    grid-column-start: 2;
+    grid-row-start: 4;
+  }
+  .five {
+    grid-row-start: 5;
+    grid-column-start: 1;
+  }
+  .six {
+    grid-row-start: 4;
+    grid-column-start: 3;
+  }
+  .seven {
+    grid-row-start: 1;
+    grid-column-start: 4;
+  }
+  .eight {
+    grid-row-start: 1;
+    grid-column-start: 5;
+  }
+}
