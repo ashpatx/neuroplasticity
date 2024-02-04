@@ -1,8 +1,6 @@
 .example {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  grid-template-rows: repeat(5, minmax(0, 1fr));
-  color: black;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 2rem;
   padding: 4rem 2rem;
 }
@@ -57,7 +55,6 @@
   grid-row-start: 1;
   grid-column-start: 5;
 }
-
 
 /* Responsive Bento Grid */
 @media (min-width: 768px) {
