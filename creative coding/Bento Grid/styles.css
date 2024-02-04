@@ -1,0 +1,59 @@
+.example {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+  color: black;
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.example div {
+  border: 1px solid black; /* Add your border color */
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.one {
+  grid-row: span 4 / span 4;
+}
+.two {
+  grid-row: span 3 / span 3;
+  grid-column: span 2 / span 2;
+}
+
+.three {
+  grid-row: span 4 / span 4;
+  grid-column-start: 5;
+  grid-row-start: 5;
+  grid-row-start: 2;
+}
+
+.four {
+  grid-row: span 2 / span 2;
+  grid-column-start: 2;
+  grid-row-start: 4;
+}
+
+.five {
+  grid-column-start: 1;
+  grid-row-start: 5;
+}
+
+.six {
+  grid-row: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 4;
+}
+
+.seven {
+  grid-row: span 5 / span 5;
+  grid-column-start: 4;
+  grid-row-start: 1;
+}
+
+.eight {
+  grid-row-start: 1;
+  grid-column-start: 5;
+}
