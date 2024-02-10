@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 250px;
+}
+
+body {
+  font-family: "Homemade Apple", serif;
+  background-image: url("https://images.unsplash.com/photo-1558051815-0f18e64e6280?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: repeat;
+  min-height: 100vh;
+}
+
+.notes-container {
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 50px;
+}
+
+.notes {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.notes-container .notes .single-note {
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  background-color: black;
+  color: white;
+  padding: 2em;
+}
+
+.single-note {
+  transform-origin: 0% 0%;
+  transform: rotate(4deg);
+}
+
+.single-note-menu {
+  position: absolute;
+  color: white;
+  top: 5%;
+  right: 10%;
+  font-size: 1em;
+}
+
+#create {
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6em;
+  cursor: pointer;
+}
+
+#create i {
+  position: absolute;
+  color: black;
+  font-size: 1em;
+}
+
+/* Main Display: Create Note */
+.create-box {
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  z-index: 1000;
+}
+
+.create-box textarea {
+  position: relative;
+}
+
+/* Sticky Note Styling */
+.ri-pushpin-line {
+  font-size: 24px;
+  top: 0%;
+  left: 50%;
+}
