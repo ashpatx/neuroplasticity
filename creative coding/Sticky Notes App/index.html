@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Cash Register</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <h1>Sticky Notes</h1>
+
+    <div class="notes-container">
+      <div class="notes">
+        <div id="create">
+          <i class="ri-add-line"></i>
+          <div class="create-box">
+            <div class="inner-create-box">
+              <textarea
+                placeholder="Write Here..."
+                id="userInput"
+                maxlength="160"
+              >
+              </textarea>
+            </div>
+          </div>
+        </div>
+        <!--Individual Sticky Note-->
+        <div class="single-note">
+          <div class="single-note-pin">
+            <i class="ri-pushpin-line"></i>
+          </div>
+
+          <!--Option to Edit or Delete Note-->
+          <div class="single-note-menu">
+            <i class="ri-pencil-line edit"></i>
+            <i class="ri-delete-bin-line delete"></i>
+          </div>
+
+          ABCD
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
