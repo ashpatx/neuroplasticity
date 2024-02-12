@@ -9,13 +9,106 @@
 }
 
 body {
-  font-family: "Homemade Apple", serif;
+  font-family: "Gloria Hallelujah", sans-serif;
+  line-height: 1.4;
   background-image: url("https://images.unsplash.com/photo-1558051815-0f18e64e6280?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-repeat: repeat;
   min-height: 100vh;
 }
 
+/* layout */
+.main-container {
+  font-family: inherit;
+  width: 90%;
+  margin: auto;
+  z-index: 99;
+}
+
+.container02 {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.container03 {
+  /* display: none */
+  position: absolute;
+  top: 25%;
+  left: 40%;
+}
+
+textarea {
+  font-family: inherit;
+  font-size: 1.4rem;
+  outline: none;
+  border: none;
+  min-width: 100px;
+  min-height: 100px;
+  width: 250px;
+  height: 250px;
+  padding: 1rem 0.5rem;
+  box-shadow: 3px 5px 15px 0px rgba(0, 0, 0, 0.9);
+}
+
+.button-caption {
+  display: none;
+}
+
+.note-options-menu {
+  position: absolute;
+  display: flex;
+  top: 1%;
+  right: 3%;
+}
+
+.note-options-menu button {
+  border: none;
+  background-color: transparent;
+  transform-origin: 0% 0%;
+  transform: rotate(0deg);
+  &:hover {
+    transform: rotate(4deg);
+  }
+}
+
+#approve-button::after {
+  content: "Accept Note";
+  display: none;
+  position: absolute;
+  bottom: -30px;
+  transform: translateX(0%, -55%);
+  color: black;
+}
+
+#approve-button:hover::after {
+  display: block;
+}
+
+#delete-button::after {
+  content: "Delete Note";
+  display: none;
+  position: absolute;
+  bottom: -30px;
+  transform: translateX(0%, -25%);
+  color: black;
+}
+
+#delete-button:hover::after {
+  display: block;
+}
+
+#create-note-btn {
+  background-color: black;
+  border-radius: 15px;
+  border: none;
+  padding: 1rem 1.5rem;
+  color: white;
+  font-size: 1rem;
+}
+
+/*
 .notes-container {
   z-index: 1;
   width: 100%;
@@ -48,6 +141,9 @@ body {
 .single-note {
   transform-origin: 0% 0%;
   transform: rotate(4deg);
+  &:hover {
+    transform: rotate(0deg);
+  }
 }
 
 .single-note-menu {
@@ -76,8 +172,8 @@ body {
   font-size: 1em;
 }
 
-/* Main Display: Create Note */
 .create-box {
+  display: none;
   position: relative;
   width: var(--size);
   height: var(--size);
@@ -85,12 +181,19 @@ body {
 }
 
 .create-box textarea {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--size);
+  height: var(--size);
+  padding: 20px;
+  outline: none;
+  font-size: 0.5em;
+  resize: none;
 }
 
-/* Sticky Note Styling */
 .ri-pushpin-line {
   font-size: 24px;
   top: 0%;
   left: 50%;
-}
+}*/
