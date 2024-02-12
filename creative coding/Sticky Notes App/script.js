@@ -40,7 +40,7 @@ createNote = (text) => {
 
   noteText.textContent = text;
 
-  // Toggle "done" class on note click
+  //Toggle line through for completed tasks
   note.addEventListener("click", () => {
     note.classList.toggle("done");
   });
@@ -50,10 +50,7 @@ createNote = (text) => {
     i = 0;
 
     note.setAttribute("style", `margin:${positionOptions[Math.floor(Math.random() * positionOptions.length)]}; background-color:${colorOptions[Math.floor(Math.random() * colorOptions.length)]}; transform:${rotateOptions[Math.floor(Math.random() * rotateOptions.length)]}`);
-
-
-    noteText.textContent = document.getElementById("user-input").value; 
-    
+    noteText.textContent = document.getElementById("user-input").value;   
     note.addEventListener('mousedown', (event) => {
       if (event.metaKey) {
         note.remove(); 
@@ -61,7 +58,7 @@ createNote = (text) => {
     });
 
 
-    // Make the note draggable
+    //Make notes draggable
     note.draggable = true;
     note.addEventListener("dragstart", (event) => {
       event.dataTransfer.setData("text/plain", "This is a note");
@@ -70,7 +67,7 @@ createNote = (text) => {
     document.querySelector("#all-notes").appendChild(note);
   };
 
-  // Add event listeners for drop target
+  //Event listeners for drop targets
   const dropTarget = document.querySelector("#all-notes-container");
   dropTarget.addEventListener("dragover", (event) => {
     event.preventDefault();
