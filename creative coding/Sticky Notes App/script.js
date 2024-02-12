@@ -1,73 +1,86 @@
-const container02 = document.getElementsByClassName('container02')[0];
-const container03 = document.getElementsByClassName('container03')[0];
-const approveBtn = document.getElementById("approve-button"); 
-const deleteBtn = document.getElementById("delete-button");
+const hideBtn = document.getElementById("hide-btn");
+const addNoteBtn = document.getElementById("new-note-btn");
+const modalContainer = document.getElementById("modal-container");
+const text = document.querySelector("#user-input");
 
 
-approveBtn.addEventListener("click", function(event){
-  event.preventDefault();
-  addNote();
-})
+const rotateOptions = ["rotate(4deg)", "rotate(2deg)", "rotate(-1deg)", "rotate(-3deg)", "rotate(-5deg)", "rotate(-7deg)"];
+const colorOptions = ["#f9c284", "#efd6af","#cfdea8","#cfdfd3"];
+const positionOptions = ["-10px", "-5px", "1px", "5px", "10px", "15px", "20px"];
+const i = 0;
 
-deleteBtn.addEventListener("click", function(){
-  typeNote();
-})
+window.onload = document.querySelector("#user-input").select();
 
-//edit current note
-function typeNote(){
-    if (container03.style.display = "none") {
-      container03.style.display = "block"; 
-    } else {
-      container03.style.display = "none"; 
+addNoteBtn.addEventListener("click", () => {
+  modalContainer.style.display = "block";
+});
+
+hideBtn.addEventListener("click", () => {
+  modalContainer.style.display = "none";
+});
+
+document.querySelector("#user-input").addEventListener('keydown', (event) => {
+  if(event.key === "Enter" && event.metaKey) {
+    createNote(text.value);
+    text.value = ""; 
+  }
+});
+
+createNote = (text) => {
+  let note = document.createElement("div");
+  let input = document.createElement("div");
+  let noteText = document.createElement("h2");
+
+  note.className="note";
+  input.className="input";
+  noteText.className="text";
+
+  input.appendChild(noteText);
+  note.appendChild(input);
+
+  noteText.textContent = text;
+
+  // Toggle "done" class on note click
+  note.addEventListener("click", () => {
+    note.classList.toggle("done");
+  });
+
+
+  if (i > colorOptions.length - 1)
+    i = 0;
+
+    note.setAttribute("style", `margin:${positionOptions[Math.floor(Math.random() * positionOptions.length)]}; background-color:${colorOptions[Math.floor(Math.random() * colorOptions.length)]}; transform:${rotateOptions[Math.floor(Math.random() * rotateOptions.length)]}`);
+
+
+    noteText.textContent = document.getElementById("user-input").value; 
+    
+    note.addEventListener('mousedown', (event) => {
+      if (event.metaKey) {
+        note.remove(); 
+      }
+    });
+
+
+    // Make the note draggable
+    note.draggable = true;
+    note.addEventListener("dragstart", (event) => {
+      event.dataTransfer.setData("text/plain", "This is a note");
+    });
+
+    document.querySelector("#all-notes").appendChild(note);
+  };
+
+  // Add event listeners for drop target
+  const dropTarget = document.querySelector("#all-notes-container");
+  dropTarget.addEventListener("dragover", (event) => {
+    event.preventDefault();
+  });
+
+  dropTarget.addEventListener("drop", (event) => {
+    event.preventDefault();
+    const data = event.dataTransfer.getData("text/plain");
+    const draggedElement = document.querySelector(".note");
+    if (draggedElement) {
+      dropTarget.appendChild(draggedElement);
     }
-  }  
-
-//create new note
-function addNote(){
-  let noteText = document.getElementById("note-text").value;
-  let nodeZero = document.createElement("div");
-  let nodeOne = document.createElement("h1");
-
-  nodeOne.innerHTML = noteText;
-  nodeOne.setAttribute("style", "width:250px; height:250px; padding:20px; font-size:24px; overflow:hidden; margin-top:10px;");
-
-  nodeOne.style.margin = position();
-  nodeOne.style.transform = rotate();
-  nodeOne.style.background = color();
-
-  nodeZero.appendChild(nodeOne);
-
-  container02.insertAdjacentElement('beforeend', nodeZero);
-
-  nodeZero.addEventListener("mouseenter",function(){
-    nodeZero.style.transform="scale(1.1)";
-  })
-  nodeZero.addEventListener("mouseleave",function(){
-    nodeZero.style.transform="scale(1)";
-  })
-  nodeZero.addEventListener("dblclick", function(){
-    nodeZero.remove();
-  })
-  document.getElementById("note-text").value = '';
-}
-
-//vary random positioning for each note using an array
-function position(){
-  let positionOptions = ["-10px", "-5px", "1px", "5px", "10px", "15px", "20px"];
-  return positionOptions[Math.floor(Math.random() * positionOptions.length)];
-}
-
-//vary rotation on each note
-function rotate(){
-  let rotateOptions = ["rotate(4deg)", "rotate(2deg)", "rotate(-1deg)", "rotate(-3deg)", "rotate(-5deg)", "rotate(-7deg)"];
-  return rotateOptions[Math.floor(Math.random() * rotateOptions.length)];
-}
-
-//vary color for each note
-function color(){
-  let colorOptions = ["#f9c284", "#efd6af","#cfdea8","#cfdfd3"];
-  let i = 0;
-  const colorIndex = i % colorOptions.length; // Use remainder operator to cycle through colors
-  i++; // Increment i for the next call
-  return colorOptions[colorIndex];
-}
+  });
