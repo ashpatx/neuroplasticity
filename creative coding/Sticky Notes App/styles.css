@@ -15,39 +15,44 @@ body {
   background-size: cover;
   background-repeat: repeat;
   min-height: 100vh;
+  position: relative;
 }
 
-/* layout */
-.main-container {
+/* Layout */
+#modal-container {
   font-family: inherit;
+  z-index: 1;
   width: 90%;
   margin: auto;
-  z-index: 99;
+  background-color: transparent;
 }
 
-.container02 {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-}
-
-.container03 {
-  display: none;
+#modal {
   position: absolute;
-  top: 25%;
-  left: 40%;
+  top: 35%;
+  left: 35%;
 }
 
-textarea {
+#modal button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: transparent;
+  transform-origin: 0% 0%;
+  transform: rotate(0deg);
+}
+
+/* Note Details */
+#modal textarea {
   font-family: inherit;
   font-size: 1.4rem;
   outline: none;
   border: none;
   min-width: 100px;
-  min-height: 100px;
-  width: 250px;
-  height: 250px;
+  min-height: 150px;
+  max-width: 250px;
+  max-height: 300px;
   padding: 1rem 0.5rem;
   box-shadow: 3px 5px 15px 0px rgba(0, 0, 0, 0.9);
 }
@@ -56,144 +61,75 @@ textarea {
   display: none;
 }
 
-.note-options-menu {
-  position: absolute;
-  display: flex;
-  top: 1%;
-  right: 3%;
-}
-
-.note-options-menu button {
-  border: none;
-  background-color: transparent;
-  transform-origin: 0% 0%;
-  transform: rotate(0deg);
-  &:hover {
-    transform: rotate(4deg);
-  }
-}
-
-#approve-button::after {
-  content: "Accept Note";
+#hide=btn::after {
+  content: "Hide";
   display: none;
   position: absolute;
-  bottom: -30px;
+  bottom: -20px;
   transform: translateX(0%, -55%);
   color: black;
 }
 
-#approve-button:hover::after {
+#hide-btn:hover::after {
   display: block;
 }
 
-#delete-button::after {
-  content: "Delete Note";
-  display: none;
-  position: absolute;
-  bottom: -30px;
-  transform: translateX(0%, -25%);
-  color: black;
+/* Sub Sections */
+section {
+  margin: auto;
+  width: 100%;
 }
 
-#delete-button:hover::after {
-  display: block;
+#header-container {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#create-note-btn {
+#header-container h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#new-note-btn {
+  font-family: inherit;
   background-color: black;
   border-radius: 15px;
   border: none;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1rem;
   color: white;
+  font-size: 1.1rem;
+}
+
+/* All Notes Section */
+#all-notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+/* JS Classes */
+.note {
+  width: 300px;
+  color: black;
+  height: auto;
+  transition: 2s;
+  cursor: pointer;
+  overflow-wrap: break-word;
+  box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.7);
+}
+
+.note h3 {
   font-size: 1rem;
 }
-
-/*
-.notes-container {
-  z-index: 1;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 50px;
-  padding: 50px;
-}
-
-.notes {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 50px;
-}
-
-.notes-container .notes .single-note {
-  position: relative;
-  width: var(--size);
-  height: var(--size);
-  background-color: black;
-  color: white;
-  padding: 2em;
-}
-
-.single-note {
-  transform-origin: 0% 0%;
-  transform: rotate(4deg);
-  &:hover {
-    transform: rotate(0deg);
-  }
-}
-
-.single-note-menu {
-  position: absolute;
-  color: white;
-  top: 5%;
-  right: 10%;
-  font-size: 1em;
-}
-
-#create {
-  position: relative;
-  width: var(--size);
-  height: var(--size);
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 6em;
-  cursor: pointer;
-}
-
-#create i {
-  position: absolute;
+.input {
+  padding: 1.5rem;
   color: black;
-  font-size: 1em;
 }
 
-.create-box {
-  display: none;
-  position: relative;
-  width: var(--size);
-  height: var(--size);
-  z-index: 1000;
+.done {
+  text-decoration: line-through;
 }
-
-.create-box textarea {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: var(--size);
-  height: var(--size);
-  padding: 20px;
-  outline: none;
-  font-size: 0.5em;
-  resize: none;
-}
-
-.ri-pushpin-line {
-  font-size: 24px;
-  top: 0%;
-  left: 50%;
-}*/
