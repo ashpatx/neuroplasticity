@@ -33,7 +33,7 @@ body {
 }
 
 .container03 {
-  /* display: none */
+  display: none;
   position: absolute;
   top: 25%;
   left: 40%;
