@@ -61,7 +61,7 @@ body {
   display: none;
 }
 
-#hide=btn::after {
+#hide-btn::after {
   content: "Hide";
   display: none;
   position: absolute;
