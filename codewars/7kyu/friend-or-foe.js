@@ -1,0 +1,18 @@
+/* Description: Make a program that filters a list of strings and returns a list with only your friends name in it.
+If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"] 
+i.e. friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"] */
+
+/* Pseudocode: 
+1. take friends array (parameter)
+2. user .filter method on friends array to create a new array
+3. create new array based on condition of elements with length equal to 4 characters 
+4. return resulting array */
+
+// Solution: 
+function friend(friends){  
+  return friends.filter(function(item) {return item.length === 4});  
+}
+
+// Improved Solution: concise arrow function that passes as an argument to the .filter method
+const friend = friends => friends.filter(friend => friend.length == 4);
