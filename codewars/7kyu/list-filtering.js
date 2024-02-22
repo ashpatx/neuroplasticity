@@ -14,3 +14,8 @@ filter_list([1,2,'aasf','1','123',123]) == [1,2,123] */
 function filter_list(l) {
  return l.filter(v => typeof v == "number")
 }
+
+//Improved Solution: use built-in Number.isInteger method as the filtering function
+function filter_list(l) {
+  return l.filter(Number.isInteger);
+}
