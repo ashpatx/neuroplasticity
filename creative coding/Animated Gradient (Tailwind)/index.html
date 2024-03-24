@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Gradient</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex justify-center items-center bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0 font-primary 
+bg-gradient-to-r 
+from-sky-100 
+to-amber-200 
+via-lime-200
+animate-gradient-x" style="font-family:'Manrope', sans-serif">
+  <!--Container-->
+  <div class="p-4 bg-stone-500/40 rounded-xl shadow-xl">
+    <h1 class="text-white text-3xl font-semibold">example</h1>
+  </div>
+  <!-- SVG Layer -->
+  <svg>
+    <filter id='noiseFilter'>
+      <feTurbulence type='fractalNoise' baseFrequency='1.9' stitchTiles='stitch' />
+      <feColorMatrix in="colorNoise" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+      <feComposite operator="in" in2="SourceGraphic" result="monoNoise" />
+      <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+    </filter>
+  </svg>
+</body>
+
+</html>
