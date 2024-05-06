@@ -1,0 +1,24 @@
+.polaroid {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin: 10px;
+  opacity: 0;
+  /*smooth transition on hover*/
+  transition: opacity 5s ease;
+}
+
+/*increase opacity on hover*/
+.polaroid:hover {
+  opacity: 1;
+}
+
+/*use radial gradient as mask*/
+.polaroid img {
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
